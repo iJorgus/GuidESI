@@ -22,4 +22,5 @@ Reparto de tareas:
 
 (reservas entre los dos)
 
+PREGUNTAR POR LAS TABLAS DE CATALOGO
     
