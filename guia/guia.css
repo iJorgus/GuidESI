@@ -1,1 +1,153 @@
+h1{
+    color: #0047AB;
+    font-family: 'Outfit';
+    font-size: 48px;
+    font-weight: 700;
+    padding: 30px 70px;
+    margin: 0;
+}
 
+h2{
+    color: black;
+    font-family: 'Inter';
+    font-size: 24px;
+    text-align: left;
+    margin: 0;
+}
+
+h3{
+    color: black;
+    font-family: 'Inter';
+    font-size: 18px;
+    text-align: left;
+    margin: 0;
+}
+
+body{
+    background-color: white;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    margin: 70px;
+}       
+
+section{
+    background-color: #E0F7FF;
+    padding: 20px;
+    margin: 0;
+}
+
+ul{
+    list-style-type: none; /* Quita los puntos */
+    padding: 0;           
+    margin: 0;             
+}
+
+footer {
+    padding: 40px 70px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    border-top: 1px solid #eee; /* Una línea muy fina para separar */
+    margin-top: 50px;
+}
+
+article{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;    /* Bordes redondeados */
+    flex: 1 1 350px;       /* Crece, se encoge y su tamaño ideal son 300px */
+    max-width: 600px;      /* No permitas que se estire demasiado */
+    margin: 0;             /* Quitamos el margen manual */
+}
+
+
+.resenas{
+    background-color: white;
+}
+
+.contenedor-resenas{
+    background-color: white;
+    display: flex;              /* Muestra por fila */
+    flex-wrap: wrap;            /* Para que bajen si no caben */
+    justify-content: center;    /* Centra el grupo de artículos */
+    gap: 50px;                  /* Espacio exacto ENTRE artículos */
+    width: 100%;                /* Ocupa todo el ancho de la section */
+}
+
+
+/* Configuración base para todos los iconos */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    color: #0047AB;
+}
+
+.icono-pequeno{
+    font-size: 14px !important;
+}
+
+/* Clase específica para rellenar */
+.relleno {
+    font-variation-settings: 'FILL' 1;  /* Esto activa el relleno */
+    color: #FFD700;
+}
+
+.rojo{ color: red;}
+.verde{ color: green;}
+.azul{ color: blue;}
+.morado{ color: purple;}
+.naranja{ color: orange;}
+
+#nota-media{
+    font-size: 28px;
+    font-weight: 800;
+    color: #0047AB;
+}
+
+.rutas{
+    display: flex;
+    background-color: white;
+    gap: 10px;
+}
+
+.cabecera-resenas {
+    display: flex;         /* Activa la fila */
+    align-items: center;    /* Centra verticalmente el 4.3 con las estrellas */
+    gap: 15px;             /* Deja un espacio elegante entre el número y las estrellas */
+    margin-bottom: 20px;    /* Separa esta cabecera de los testimonios de abajo */
+}
+
+.contenedor-boton{
+    background-color: white;
+}
+
+.boton-reserva{
+    background-color: #0047AB;
+    color: white;
+    font-size: 28px;
+    border: none;            /* Quita el borde gris por defecto */
+    outline: none;           /* Quita el contorno al hacer clic */
+    cursor: pointer;         /* Hace que aparezca la "manita" al pasar el ratón */
+    font-family: inherit;    /* Obliga al botón a usar la misma letra que tu sección */
+
+    padding: 18px;            
+    border-radius: 8px;
+    box-sizing: border-box;   /* Evita que el padding lo haga más grande que la pantalla */
+
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* Ocultar titulos de h? */
+.hidden-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
