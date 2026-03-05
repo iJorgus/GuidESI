@@ -1,1 +1,93 @@
+/* Reset básico para que se vea igual en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 
+
+/* Scroll suave para la navegación */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos principales de la Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    
+    /* Hace que el menú se quede pegado arriba al hacer scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Contenedor del logo simulando la forma circular de tu imagen */
+.logo-img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+}
+
+/* Lista de enlaces central */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* Separación entre los textos */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón y clase activa */
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #0047a5; /* Color azul al pasar el ratón */
+}
+
+/* Botón derecho */
+.btn-reservar {
+    display: inline-block;
+    background-color: #004ca8; /* Azul similar al de la imagen */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #00367c;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    color: #0047AB;
+}
+
+/* Estilos temporales para las secciones (solo para que veas el scroll) */
+section {
+    height: 100vh;
+    padding: 100px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+section:nth-child(even) {
+    background-color: #ffffff;
+}
