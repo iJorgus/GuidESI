@@ -62,7 +62,6 @@ article{
     margin: 0;             /* Quitamos el margen manual */
 }
 
-
 .resenas{
     background-color: white;
 }
@@ -98,6 +97,7 @@ article{
 .azul{ color: blue;}
 .morado{ color: purple;}
 .naranja{ color: orange;}
+.gris{ color: gray;}
 
 #nota-media{
     font-size: 28px;
@@ -109,6 +109,24 @@ article{
     display: flex;
     background-color: white;
     gap: 10px;
+}
+
+.mapa{
+    margin-left: auto;
+    background-color: white;
+    padding: 0px;
+    display: flex;
+    align-items: center;        /* Alinea el botón y el icono verticalmente */
+    gap: 10px;
+}
+
+.boton-mapa{
+    font-size: large;
+    border-radius: 20px;
+    background-color: #89BAFF;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
 }
 
 .cabecera-resenas {
@@ -139,6 +157,62 @@ article{
     width: 100%;
     transition: 0.3s;
 }
+
+/* Fondo oscuro que cubre toda la pantalla */
+#popup-container {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-contenido {
+    position: relative;
+    background: white;
+    padding: 5px;
+    border-radius: 4px;
+    width: 60%;   /* Ocupa casi todo el ancho de la pantalla */
+    height: 85%;  /* Ocupa casi todo el alto de la pantalla */
+    
+    /* Centramos el contenido por si la imagen no es tan grande */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;           /* Evita que la imagen se salga si es enorme */
+}
+
+/* CSS del pop up del mapa */
+.popup-contenido img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Botón de cerrar (la X) */
+#cerrar-popup {
+    position: absolute;
+    top: 10px;  /* Un poco separada del borde */
+    right: 10px;
+    background: rgba(255, 0, 0, 0.7); /* Rojo semitransparente */
+    color: white;
+    width: 35px; /* Un pelín más grande para que sea fácil dar click */
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 1010; /* Por encima de la imagen */
+}
+/* Fin del CSS del pop up */
 
 /* Ocultar titulos de h? */
 .hidden-title {
