@@ -10,18 +10,18 @@ Trabajo PNET de Juan Fernandez y Jorge Bolívar
 
 
 Reparto de tareas:
-  Juani:
+- Juani:
     - catalogo
     - reservas
     - guia
     
         
-  Jorge:
+- Jorge:
     - navbar
     - index
+
+- Annia
+    - reservas
     - footer
-
-(reservas entre los dos)
-
 PREGUNTAR POR LAS TABLAS DE CATALOGO
     
