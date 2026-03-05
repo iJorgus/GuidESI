@@ -13,6 +13,7 @@ Reparto de tareas:
 - Juani:
     - catalogo
     - guia
+    - footer
     
         
 - Jorge:
@@ -21,6 +22,6 @@ Reparto de tareas:
 
 - Annia
     - reservas
-    - footer
+    - noticias
 PREGUNTAR POR LAS TABLAS DE CATALOGO
     
