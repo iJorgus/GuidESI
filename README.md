@@ -12,7 +12,6 @@ Trabajo PNET de Juan Fernandez y Jorge Bolívar
 Reparto de tareas:
 - Juani:
     - catalogo
-    - reservas
     - guia
     
         
