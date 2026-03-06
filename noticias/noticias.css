@@ -1,1 +1,101 @@
+.sidebar-noticias {
+    position: fixed;
+    left: 1;
+    top: 0;
+    width: 340px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #dcdcdc; 
+    display: none;
+    z-index: 1000;
+    padding: 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.cabecera-noticias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cabecera-noticias h2 {
+    font-size: 0.9em;
+    color: #444;
+    margin: 0;
+}
+
+#cerrar-noticias {
+    background: none;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #888;
+    padding: 2px 8px;
+    margin-bottom: 5px;
+}
+
+.lista-noticias {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blue-bg { background-color: #00bcd4; }
+
+.texto-noticia h3 {
+    font-size: 13px;
+    margin: 0 0 3px 0;
+    color: #222;
+    line-height: 1.2;
+}
+
+.texto-noticia p {
+    font-size: 11px;
+    color: #666;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.icono-noticia {
+    width: 130px;
+    height: 90px; 
+    overflow: hidden;
+    margin-left: 0;
+    flex-shrink: 0;
+}
+
+.icono-noticia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boton-flotante {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 999;
+    padding: 8px 15px;
+    background: #0047bb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.tarjeta-noticia {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 0;
+}
 
