@@ -1,1 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
 
+#formReserva {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #b2b2b2;
+    border-radius: 8px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444444;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #cccccc;
+}
+
+.fila-fecha {
+    display: flex;
+    gap: 10px;   
+}
+
+.fila-fecha input {
+    width: 50px;
+    text-align: center;
+    border-color: #cccccc;
+}
+
+.contenedor-boton {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#btnReservar {
+    background-color: #0047bb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icono {
+    margin-right: 8px;
+}
