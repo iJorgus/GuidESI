@@ -1,1 +1,111 @@
+<html lang = "es">
+<head>
+    <title>Catalogo de guias</title>
 
+    <!-- Fuentes Outfit e Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href = "catalogo.css" rel = "stylesheet">
+    <script src="catalogo.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nuestros Guias Turísticos</h1>
+        <p>Encuentra el guia que se ajuste a tus necesidades</p>
+    </header>
+    <section class = "seleccion">
+        <h2>Buscar por ciudad:</h2>
+        <input type="text" id="buscador" aria-label="Buscar guías por ciudad" placeholder="Escribe una ciudad (ej. Sevilla)...">
+        <!-- aria-label sirve para personas que usen lector de pantalla les muestre para que sirve este cuadro de texto -->
+    </section>
+    <section class = "guias">
+        <a href="guia.html" class="enlace-articulo" data-city="barcelona">
+        <article class = "info-guia">
+            <img src =  "imagenes/persona.jpg" alt = "Foto del guia">
+            <ul>
+                <li><span class = "negrita">Nombre:</span> Jose Manuel</li>
+                <li><span class = "negrita">Max pers:</span> 15 personas</li>
+                <li><span class = "negrita">Idiomas:</span> Español e Ingles</li>
+                <li><span class = "negrita">Ciudad:</span> Barcelona</li>
+            </ul>
+        </article>
+        </a>
+
+        <a href="guia2.html" class="enlace-articulo" data-city="sevilla">
+        <article class = "info-guia">
+            <img src =  "imagenes/persona2.jpg" alt = "Foto del guia">
+            <ul>
+                <li><span class = "negrita">Nombre:</span> Curro Jimenez</li>
+                <li><span class = "negrita">Max pers:</span> 10 personas</li>
+                <li><span class = "negrita">Idiomas:</span> Español</li>
+                <li><span class = "negrita">Ciudad:</span> Sevilla</li>
+            </ul>
+        </article>
+        </a>
+
+        <a href="guia3.html" class="enlace-articulo" data-city="madrid">
+        <article class = "info-guia">
+            <img src =  "imagenes/persona3.jpg" alt = "Foto del guia">
+            <ul>
+                <li><span class = "negrita">Nombre:</span> Javier Millán</li>
+                <li><span class = "negrita">Max pers:</span> 20 personas</li>
+                <li><span class = "negrita">Idiomas:</span> Español y Francés</li>
+                <li><span class = "negrita">Ciudad:</span> Madrid</li>
+            </ul>
+        </article>
+        </a>
+
+        <a href="guia4.html" class="enlace-articulo" data-city="cadiz">
+        <article class = "info-guia">
+            <img src =  "imagenes/persona4.jpg" alt = "Foto del guia">
+            <ul>
+                <li><span class = "negrita">Nombre:</span> Lolo López</li>
+                <li><span class = "negrita">Max pers:</span> 12 personas</li>
+                <li><span class = "negrita">Idiomas:</span> Español y Portugués</li>
+                <li><span class = "negrita">Ciudad:</span> Cádiz</li>
+            </ul>
+        </article>
+        </a> 
+<!--  
+        <a href="guia.html" class="enlace-articulo" data-city="barcelona">
+        <article class = "info-guia">
+            <img src =  "imagenes/persona.jpg" alt = "Foto del guia">
+            <ul>
+                <li><span class = "negrita">Nombre:</span> Jose Manuel</li>
+                <li><span class = "negrita">Max pers:</span> 15 personas</li>
+                <li><span class = "negrita">Idiomas:</span> Español e Ingles</li>
+                <li><span class = "negrita">Ciudad:</span> Barcelona</li>
+            </ul>
+        </article>
+        </a>
+
+        <a href="guia2.html" class="enlace-articulo" data-city="sevilla">
+        <article class = "info-guia">
+            <img src =  "imagenes/persona.jpg" alt = "Foto del guia">
+            <ul>
+                <li><span class = "negrita">Nombre:</span> Jose Manuel</li>
+                <li><span class = "negrita">Max pers:</span> 15 personas</li>
+                <li><span class = "negrita">Idiomas:</span> Español e Ingles</li>
+                <li><span class = "negrita">Ciudad:</span> Barcelona</li>
+            </ul>
+        </article>
+        </a>
+        
+        <a href="guia3.html" class="enlace-articulo" data-city="madrid">
+        <article class = "info-guia">
+            <img src =  "imagenes/persona.jpg" alt = "Foto del guia">
+            <ul>
+                <li><span class = "negrita">Nombre:</span> Jose Manuel</li>
+                <li><span class = "negrita">Max pers:</span> 15 personas</li>
+                <li><span class = "negrita">Idiomas:</span> Español e Ingles</li>
+                <li><span class = "negrita">Ciudad:</span> Barcelona</li>
+            </ul>
+        </article>
+        </a>
+-->
+    </section>
+</body>
+</html>
