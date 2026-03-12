@@ -3,9 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
-
 
 /* Scroll suave para la navegación */
 html {
@@ -25,20 +23,27 @@ html {
     position: sticky;
     top: 0;
     z-index: 1000;
+    font-family: 'Inter', 'Outfit', sans-serif; 
 }
 
-/* Contenedor del logo simulando la forma circular de tu imagen */
+/* Contenedor del logo */
+.logo a {
+    display: block; 
+}
+
 .logo-img {
     height: 60px;
     width: 60px;
+    border-radius: 50%;
     object-fit: cover;
+    border: 1px solid #eaeaea;
 }
 
 /* Lista de enlaces central */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 40px; /* Separación entre los textos */
+    gap: 40px; 
 }
 
 .nav-links li a {
@@ -52,13 +57,13 @@ html {
 /* Efecto al pasar el ratón y clase activa */
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #0047a5; /* Color azul al pasar el ratón */
+    color: #0047a5; 
 }
 
 /* Botón derecho */
 .btn-reservar {
     display: inline-block;
-    background-color: #004ca8; /* Azul similar al de la imagen */
+    background-color: #004ca8; 
     color: #ffffff;
     text-decoration: none;
     padding: 12px 24px;
@@ -70,24 +75,4 @@ html {
 
 .btn-reservar:hover {
     background-color: #00367c;
-}
-
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    color: #0047AB;
-}
-
-/* Estilos temporales para las secciones (solo para que veas el scroll) */
-section {
-    height: 100vh;
-    padding: 100px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
-}
-
-section:nth-child(even) {
-    background-color: #ffffff;
 }
