@@ -30,5 +30,7 @@ INFORMACIÓN PARA ANNIA:
     - reservas: Una vez hemos seleccionado un guía del catálogo y hemos dado a "Resrvar" se abre esta página. Un formulario que solicite nombre completo, correo, fecha, telefono, numero de personas.
     - noticias: Es un desplegable lateral con noticias, que Jorge pondrá en el index, debes ir a Github->noticias.html y editar el contenido. Debe haber noticias inventadas (puedes usar la IA para crear noticias random). 
 
+Tabular en catalogo los datos de los guias
+Añadir en formulario la opcion de nombre del guia y hora
 
     
