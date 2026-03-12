@@ -26,6 +26,12 @@ h1 { font-size: 28px; font-weight: 700; }
 h2 { font-size: 18px; font-weight: 700; }
 h3 { font-size: 14px; font-weight: 700; }
 
+/* Regla de seguridad para que ninguna imagen se salga de su caja */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Hero Section & Buscador */
 .hero-section {
     background-color: var(--azul-cielo);
