@@ -60,27 +60,6 @@ img{
     font-weight: bold;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  color: #0047AB;
-}
-
-.icono-pequeno{
-    font-size: 14px !important;
-}
-
-/* Clase específica para rellenar */
-.relleno {
-  font-variation-settings: 'FILL' 1;  /* Esto activa el relleno */
-  color: #FFD700;
-}
-
-.rojo{ color: red;}
-.verde{ color: green;}
-.azul{ color: blue;}
-.morado{ color: purple;}
-.naranja{ color: orange;}
-
 .seleccion{
     background-color: white;
     padding: 10px 70px;
