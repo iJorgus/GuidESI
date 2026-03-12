@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuidESI - Descubre el mundo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
 
+    <div id="navbar-container"></div>
+
+    <section class="hero-section">
+        <h1>Descubre el mundo con GuidESI</h1>
+        <p>Encuentra al guía turístico perfecto para tu próxima aventura.</p>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Ciudad">
+            <input type="number" placeholder="Personas" min="1">
+            <select>
+                <option value="">Idioma</option>
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+            </select>
+            <input type="date" placeholder="Fechas">
+            <div class="price-range">
+                <label for="precio">Rango de precio:</label>
+                <input type="range" id="precio" min="0" max="200">
+            </div>
+            <button class="search-btn">Buscar</button>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2>El impacto de nuestra comunidad</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h1 style="margin-bottom: 5px;">3.282.541</h1>
+                <p>Viajeros satisfechos</p>
+            </div>
+            <div class="card">
+                <h1 style="margin-bottom: 5px;">40.010</h1>
+                <p>Guías registrados</p>
+            </div>
+            <div class="card">
+                <h1 style="margin-bottom: 5px;">450.087</h1>
+                <p>Rutas completadas</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2>Guías Destacados</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="https://image.jimcdn.com/cdn-cgi/image/width=648%2Cheight=10000%2Cfit=contain%2Cformat=jpg%2C/app/cms/storage/image/path/sb00e8250327cd0a1/image/i5bf0903cdfb73692/version/1758032935/gu%C3%ADa-tur%C3%ADstico-todo-lo-que-necesitas-saber-para-convertirte-en-profesional.jpg" alt="Foto Guía 1">
+                <h3>Jorge Bolívar</h3>
+                <p>Cádiz</p>
+                <p>Español, Inglés</p>
+            </div>
+            <div class="card">
+                <img src="https://image.jimcdn.com/cdn-cgi/image/width=648%2Cheight=10000%2Cfit=contain%2Cformat=jpg%2C/app/cms/storage/image/path/sb00e8250327cd0a1/image/i5bf0903cdfb73692/version/1758032935/gu%C3%ADa-tur%C3%ADstico-todo-lo-que-necesitas-saber-para-convertirte-en-profesional.jpg" alt="Foto Guía 2">
+                <h3>Juan Fernández</h3>
+                <p>Sevilla</p>
+                <p>Español, Francés</p>
+            </div>
+            <div class="card">
+                <img src="https://image.jimcdn.com/cdn-cgi/image/width=648%2Cheight=10000%2Cfit=contain%2Cformat=jpg%2C/app/cms/storage/image/path/sb00e8250327cd0a1/image/i5bf0903cdfb73692/version/1758032935/gu%C3%ADa-tur%C3%ADstico-todo-lo-que-necesitas-saber-para-convertirte-en-profesional.jpg" alt="Foto Guía 3">
+                <h3>Jacobo Caro</h3>
+                <p>Málaga</p>
+                <p>Español, Alemán</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="importar.js"></script>
+    
+</body>
+</html>
