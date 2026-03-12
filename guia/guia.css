@@ -89,7 +89,7 @@ article{
 /* Clase específica para rellenar */
 .relleno {
     font-variation-settings: 'FILL' 1;  /* Esto activa el relleno */
-    color: #FFD700;
+    color: #AD9300;
 }
 
 .rojo{ color: red;}
