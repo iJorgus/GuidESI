@@ -1,1 +1,112 @@
+/* Paleta de Colores Corporativos GuidESI */
+:root {
+    --azul-cielo: #E0F7FF;
+    --azul-cobalto: #0047AB;
+    --azul-intermedio: #89BAFF;
+    --blanco-puro: #FFFFFF;
+}
 
+/* Estilos Base y Tipografía */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco-puro);
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--azul-cobalto);
+    margin-top: 0;
+}
+
+h1 { font-size: 28px; font-weight: 700; }
+h2 { font-size: 18px; font-weight: 700; }
+h3 { font-size: 14px; font-weight: 700; }
+
+/* Hero Section & Buscador */
+.hero-section {
+    background-color: var(--azul-cielo);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.search-bar {
+    background: var(--blanco-puro);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin: 30px auto 0;
+    max-width: 900px;
+}
+
+.search-bar input, .search-bar select {
+    padding: 10px;
+    border: 1px solid var(--azul-intermedio);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+.search-bar .price-range {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-btn {
+    background-color: var(--azul-cobalto);
+    color: var(--blanco-puro);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+}
+
+.search-btn:hover {
+    background-color: #003580; /* Tono ligeramente más oscuro para el hover */
+}
+
+/* Secciones: Estadísticas y Guías Destacados */
+.section-container {
+    padding: 50px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--blanco-puro);
+    border: 1px solid var(--azul-cielo);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--azul-intermedio);
+    margin-bottom: 15px;
+    object-fit: cover;
+}
