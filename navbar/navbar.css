@@ -9,6 +9,11 @@
 html {
     scroll-behavior: smooth;
 }
+#navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
 /* Estilos principales de la Navbar */
 .navbar {
@@ -17,13 +22,7 @@ html {
     align-items: center;
     padding: 10px 40px;
     background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    
-    /* Hace que el menú se quede pegado arriba al hacer scroll */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    font-family: 'Inter', 'Outfit', sans-serif; 
+    border-bottom: 1px solid #e0e0e0; 
 }
 
 /* Contenedor del logo */
