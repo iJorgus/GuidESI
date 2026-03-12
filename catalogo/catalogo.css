@@ -35,13 +35,16 @@ section{
 ul{
     list-style-type: none; /* Quita los puntos */
     padding: 0;           
-    margin: 0;             
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;             
 }
 
 article{
     background-color: white;
     padding: 20px;
-    margin: 20 70;
+    margin: 20 50;
 }
 
 img{
@@ -53,13 +56,8 @@ img{
     margin: auto;
 }
 
-button{
-    margin-left: 10;
-    font-size: large;
-    background-color: #89BAFF;
-    color: white;
-    border-style: none;             /* Quitar el borde */
-    border-radius: 12px;            /* Borde redondeado */
+.negrita{
+    font-weight: bold;
 }
 
 .material-symbols-outlined {
@@ -94,4 +92,30 @@ button{
     /* Crea 4 columnas del mismo tamaño automáticamente */
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px; /* Espacio entre artículos */
+}
+
+.enlace-articulo {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    
+    /* 1. Preparamos la transición para que no sea un salto brusco */
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                box-shadow 0.3s ease;
+}
+
+/* 2. El efecto al pasar el mouse */
+.enlace-articulo:hover {
+    transform: scale(1.03);                         /* Se agranda un 3% */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);    /* Crea sombra de "elevación" */
+}
+
+/* 3. Opcional: El efecto al hacer click (Feedback táctil) */
+.enlace-articulo:active {
+    transform: scale(0.98); /* Se encoge un poco al presionar */
+}
+
+.ocultar-guia {
+    display: none !important;
 }
