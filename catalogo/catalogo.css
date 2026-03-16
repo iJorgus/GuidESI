@@ -44,7 +44,7 @@ ul{
 article{
     background-color: white;
     padding: 20px;
-    margin: 20 50;
+    margin: 20px 50px;
 }
 
 img{
@@ -54,10 +54,6 @@ img{
     padding-bottom: 10px;
     display: block;
     margin: auto;
-}
-
-.negrita{
-    font-weight: bold;
 }
 
 .seleccion{
@@ -97,4 +93,76 @@ img{
 
 .ocultar-guia {
     display: none !important;
+}
+
+.info-guia table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.info-guia th {
+    text-align: left;
+    font-weight: bold; /* Esto sustituye a tu clase .negrita */
+    color: #0047AB;    /* Usando tu azul para destacar las etiquetas */
+    padding: 8px 0;
+    width: 45%;        /* Ajusta el ancho de la columna izquierda */
+    border-bottom: 1px solid #eee;
+}
+
+.info-guia td {
+    padding: 8px 0;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* Ocultar titulos de h? */
+.hidden-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        align-items: center;    /* Centra la foto y el texto */
+        text-align: center;
+    }
+
+    /* Ajustar los márgenes para móviles */
+    header, 
+    .seleccion, 
+    .guias {
+        padding: 20px 20px; /* Reducimos de 70px a 20px */
+    }
+
+    article {
+        margin: 10px 0;     /* Quitamos el margen lateral de 50px que causaba huecos blancos */
+        width: 100%;        /* Asegura que ocupe el ancho disponible */
+        box-sizing: border-box;
+    }
+
+    .guias {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /*  Ajuste de textos para que no se vean gigantes */
+    h1 {
+        font-size: 32px;
+        padding: 30px 0 10px;
+    }
+
+    /* 6. Móviles muy pequeños 1 sola columna */
+    @media (max-width: 480px) {
+        .guias {
+            grid-template-columns: 1fr;
+        }
+    }
 }
