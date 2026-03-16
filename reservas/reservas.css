@@ -1,5 +1,6 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter';
     background-color: #ffffff;
     color: #333333;
 }
@@ -27,7 +28,7 @@ label {
     color: #444444;
 }
 
-input {
+input, select {
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 5px;
@@ -44,9 +45,8 @@ input::placeholder {
 }
 
 .fila-fecha input {
-    width: 50px;
+    width: 60px;
     text-align: center;
-    border-color: #cccccc;
 }
 
 .contenedor-boton {
