@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">  <!-- Debe estar lo primero -->
+    
     <title>Javier Millán | Guia turístico en Madrid</title>
     <!-- Fuentes Outfit e Inter-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" type="text/css">
     
     <!-- Fuente de iconos -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" type="text/css">
     
-    <link href = "guia.css" rel = "stylesheet">
+    <link href = "guia.css" rel = "stylesheet" type="text/css">
 
     <script src = "guia.js" defer></script>
 </head>
@@ -28,15 +30,15 @@
                 Si buscas una mezcla de rigor histórico y las anécdotas más canallas de la Movida, ¡nos vemos en la Puerta del Sol!"
             </p>
             </section>
-        <section class = "rutas">
+        <div class = "rutas">
             <span class="material-symbols-outlined rojo">counter_1</span>
             <span class="material-symbols-outlined verde">counter_2</span>
             <span class="material-symbols-outlined azul">counter_5</span>
-            <section class = "mapa">
+            <div class = "mapa">
                 <button id="btn-mapa" class="boton-mapa">Ver mapa</button>
                 <span class="material-symbols-outlined">open_in_full</span>
-            </section>
-        </section>
+            </div>
+        </div>
         <section class = "resenas">
             <div class = "cabecera-resenas">
                 <h2 id = "nota-media">4.3</h2>
@@ -112,7 +114,7 @@
 
         <section class="contenedor-boton">
             <h2 class="hidden-title">Contactar con el guía</h2>
-            <button class="boton-reserva">¡Reserva ahora!</button>
+            <a href = "reservas.html?nombre=Javier%20Mill%C3%A1n&maxPersonas=20" class="boton-reserva">¡Reserva ahora!</a>
         </section>
     </main>
 
@@ -120,7 +122,7 @@
     <div id="popup-container">
         <div class="popup-contenido">
             <span id="cerrar-popup">&times;</span>
-            <img id="imagen-mapa" src="mapa_madrid.png" alt="Mapa interactivo">
+            <img id="imagen-mapa" src="imagenes/mapa_madrid.png" alt="Mapa interactivo">
         </div>
     </div>
 </body>
