@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva</title>
     <link rel="stylesheet" type="text/css" href="reservas.css"> 
+    <!-- Fuentes Outfit e Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -23,15 +28,33 @@
                     <input type="tel" id="telefono" name="telefono" placeholder="Value"> </div>
 
                 <div class="campo">
+                    <label for="guia">Guia</label>
+                    <select id="guia" name="nombre">
+                        <option value="" disabled selected>-- Selecciona un guía --</option>
+                        <option value="guia1">Jose Manuel</option>
+                        <option value="guia2">Curro Jimenez</option>
+                        <option value="guia3">Javier Millán</option>
+                        <option value="guia4">Lolo López</option>
+                    </select>
+                </div>
+                <br>
+                <div class="campo">
                     <label for="personas">Numero personas</label>
-                    <input type="number" id="personas" name="personas" placeholder="Value"> </div>
+                    <input type="number" id="personas" name="personas" min="1" placeholder="Value" required> </div>
 
                 <div class="campo-fecha">
                     <label>Fecha</label>
                     <div class="fila-fecha">
-                        <input type="text" id="dia" name="dia" placeholder="DD" maxlength="2">
-                        <input type="text" id="mes" name="mes" placeholder="MM" maxlength="2">
-                        <input type="text" id="anio" name="anio" placeholder="YYYY" maxlength="4">
+                        <input type="text" id="dia" name="dia" placeholder="DD" maxlength="2" aria-label="dia">
+                        <input type="text" id="mes" name="mes" placeholder="MM" maxlength="2" aria-label="mes">
+                        <input type="text" id="ano" name="ano" placeholder="YYYY" maxlength="4" aria-label="ano">
+                    </div>
+                </div> <br>
+
+                <div class="campo-hora">
+                    <label>Hora</label>
+                    <div class="fila-hora">
+                        <input type="time" id="hora" name="hora" placeholder="HH" maxlength="2" aria-label="hora">
                     </div>
                 </div>
 
