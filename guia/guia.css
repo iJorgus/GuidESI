@@ -62,6 +62,10 @@ article{
     margin: 0;             /* Quitamos el margen manual */
 }
 
+.texto-descripcion{
+    padding: 0px 20px;
+}
+
 .resenas{
     background-color: white;
 }
@@ -109,6 +113,7 @@ article{
     display: flex;
     background-color: white;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .mapa{
@@ -156,6 +161,9 @@ article{
     display: block;
     width: 100%;
     transition: 0.3s;
+
+    text-decoration: none;   /* 1. Quita el subrayado del link */
+    text-align: center;      /* 2. Centra el texto dentro del bloque */
 }
 
 /* Fondo oscuro que cubre toda la pantalla */
@@ -214,7 +222,7 @@ article{
 }
 /* Fin del CSS del pop up */
 
-/* Ocultar titulos de h? */
+/* Ocultar titulos de hX */
 .hidden-title {
     position: absolute;
     width: 1px;
@@ -224,4 +232,49 @@ article{
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 2. AJUSTE DE CABECERA (Reducimos el padding gigante de 70px) */
+    h1 {
+        font-size: 32px;
+        padding: 40px 20px 20px;
+        text-align: center;
+    }
+
+    section, .seleccion, .guias, footer {
+        padding: 20px !important;
+    }
+
+    .rutas{
+        margin: 10px;
+    }
+
+    .boton-reserva {
+        padding: 30px 20px !important; /* Más alto para el pulgar */
+        font-size: 32px !important;    /* Letra más grande */
+        border-radius: 15px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .contenedor-resenas {
+        gap: 20px; /* Menos espacio entre tarjetas */
+    }
+
+    article {
+        max-width: 100%;
+        flex: 1 1 100%; /* Una sola columna de reseñas */
+        margin: 0;
+    }
+
+    .popup-contenido {
+        width: 95%;
+        height: 70%;
+    }
 }
