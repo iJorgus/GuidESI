@@ -41,6 +41,7 @@ html {
 /* Lista de enlaces central */
 .nav-links {
     display: flex;
+    flex-direction: row;
     list-style: none;
     gap: 40px; 
 }
