@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     
     const form = document.getElementById('formReserva'); 
@@ -6,8 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const nombre = document.getElementById('nombre').value;
         const email = document.getElementById('correo').value;
         const expEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const telefono = document.getElementById('telefono');
+        const valorTelefono = document.getElementById('telefono').value;
         const expTelefono = /^[+]?[0-9]+$/;
+        const d = document.getElementById('dia').value;
+        const m = document.getElementById('mes').value;
+        const a = document.getElementById('ano').value;
+            
+    
 
         if (nombre === "" || nombre === "Value") {
             alert("Por favor, rellene el nombre completo");
@@ -21,10 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (telefono !== "" && !expTelefono.test(telefono)) {
+        if (valorTelefono !== "" && !expTelefono.test(valorTelefono)) {
             alert("El teléfono solo puede contener el símbolo + y números (sin letras)");
             event.preventDefault();
             return;
         }
-    });
+
+        if (isNaN(d) || d < 1 || d > 31 || isNaN(m) || m < 1 || m > 12 || a < 2026) {
+            alert("Por favor, introduce una fecha válida (DD MM YYYY)");
+            event.preventDefault();
+            return;
+        }
+    })
 });
