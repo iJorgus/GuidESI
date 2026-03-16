@@ -1,3 +1,5 @@
+.body{ font-family: 'Inter';}
+.h1{ font-family: 'Outfit';}
 .sidebar-noticias {
     position: fixed;
     left: 1;
@@ -21,8 +23,9 @@
     border-bottom: 1px solid #eeeeee;
 }
 
-.cabecera-noticias h2 {
-    font-size: 0.9em;
+.h2 {
+    font-family: 'Outfit';
+    font-size: 0.7em;
     color: #444;
     margin: 0;
 }
@@ -46,9 +49,10 @@
 
 .blue-bg { background-color: #00bcd4; }
 
-.texto-noticia h3 {
-    font-size: 13px;
-    margin: 0 0 3px 0;
+.h3 {
+    font-family: 'Outfit';
+    font-size: 11px;
+    margin: 0;
     color: #222;
     line-height: 1.2;
 }
@@ -91,11 +95,10 @@
 .tarjeta-noticia {
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 4px; 
     background: white;
     border: 1px solid #f0f0f0;
     border-radius: 8px;
     margin-bottom: 10px;
     padding: 0;
 }
-
