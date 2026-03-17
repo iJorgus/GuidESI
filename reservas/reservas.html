@@ -13,11 +13,11 @@
 </head>
 <body>
     <header>
+        <h1 class="sr-only">Formulario de contacto</h1>
     </header>
 
-    <section>
-        <article> <form id="formReserva" name="formReserva" action="#" method="post"> <div class="campo">
-                    <label for="nombre">Nombre completo</label> <input type="text" id="nombre" name="nombre" placeholder="Value"> </div>
+            <form id="formReserva" name="formReserva" action="#" method="post"> <div class="campo">
+                    <label for="nombre">Nombre completo</label> <input type="text" id="nombre" name="nombre_cliente" placeholder="Value"> </div>
 
                 <div class="campo">
                     <label for="correo">Correo</label>
@@ -28,33 +28,35 @@
                     <input type="tel" id="telefono" name="telefono" placeholder="Value"> </div>
 
                 <div class="campo">
-                    <label for="guia">Guia</label>
-                    <select id="guia" name="nombre">
-                        <option value="" disabled selected>-- Selecciona un guía --</option>
-                        <option value="guia1">Jose Manuel</option>
-                        <option value="guia2">Curro Jimenez</option>
-                        <option value="guia3">Javier Millán</option>
-                        <option value="guia4">Lolo López</option>
-                    </select>
+                    <span class="label-mock">Nombre del guia</span>
+                    <span id="guiaVisual" style="font-weight: bold; margin-left: 10px;">Cargando...</span>
+    
+                    <input type="hidden" id="nombreGuia" name="nombre_guia" value="">
                 </div>
-                <br>
+
+                <div class="campo">
+                    <span class="label-mock">Ciudad:</span>
+                    <span id="visualCiudad" style="font-weight: bold; margin-left: 10px;">Cargando...</span>
+                    <input type="hidden" id="hiddenCiudad" name="guia_ciudad">
+                </div>
+                
                 <div class="campo">
                     <label for="personas">Numero personas</label>
                     <input type="number" id="personas" name="personas" min="1" placeholder="Value" required> </div>
 
                 <div class="campo-fecha">
-                    <label>Fecha</label>
+                    <label for="dia">Fecha</label>
                     <div class="fila-fecha">
                         <input type="text" id="dia" name="dia" placeholder="DD" maxlength="2" aria-label="dia">
                         <input type="text" id="mes" name="mes" placeholder="MM" maxlength="2" aria-label="mes">
                         <input type="text" id="ano" name="ano" placeholder="YYYY" maxlength="4" aria-label="ano">
                     </div>
-                </div> <br>
+                </div>
 
                 <div class="campo-hora">
-                    <label>Hora</label>
-                    <div class="fila-hora">
-                        <input type="time" id="hora" name="hora" placeholder="HH" maxlength="2" aria-label="hora">
+                    <label for="hora">Hora</label>
+                        <div class="fila-hora">
+                        <input type="time" id="hora" name="hora">
                     </div>
                 </div>
 
@@ -64,9 +66,6 @@
                 </div>
                 
             </form>
-        </article>
-    </section>
-
     <footer>
     </footer>
 
