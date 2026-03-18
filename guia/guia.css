@@ -28,12 +28,12 @@ body{
     font-family: 'Inter';
     font-size: 14px;
     font-weight: 500;
-    margin: 70px;
+    margin: 0px;
 }       
 
 section{
     background-color: #E0F7FF;
-    padding: 20px;
+    padding: 20px 70px;
     margin: 0;
 }
 
@@ -164,6 +164,10 @@ article{
 
     text-decoration: none;   /* 1. Quita el subrayado del link */
     text-align: center;      /* 2. Centra el texto dentro del bloque */
+}
+
+.rutas, .contenedor-boton {
+    padding: 0px 70px; /* Añade espaciado lateral para que se alineen con las secciones */
 }
 
 /* Fondo oscuro que cubre toda la pantalla */
