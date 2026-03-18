@@ -43,15 +43,6 @@ ul{
     margin: 0;             
 }
 
-footer {
-    padding: 40px 70px;
-    text-align: center;
-    font-size: 14px;
-    color: #888;
-    border-top: 1px solid #eee; /* Una línea muy fina para separar */
-    margin-top: 50px;
-}
-
 article{
     background-color: white;
     padding: 20px;
@@ -251,7 +242,7 @@ article{
         text-align: center;
     }
 
-    section, .seleccion, .guias, footer {
+    section, .seleccion, .guias {
         padding: 20px !important;
     }
 
