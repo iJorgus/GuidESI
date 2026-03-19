@@ -34,3 +34,8 @@ Tabular en catalogo los datos de los guias
 Añadir en formulario la opcion de nombre del guia y hora
 
     
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+        <div id="navbar-container"></div>
+            <div id="footer-container"></div>
+    <script src="importar.js"></script>
