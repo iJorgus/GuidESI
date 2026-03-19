@@ -116,3 +116,109 @@ img {
     margin-bottom: 15px;
     object-fit: cover;
 }
+
+/* CSS para el video preview */
+/* Contenedor de la miniatura */
+.video-preview {
+    position: relative;
+    cursor: pointer;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.video-preview img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efecto al pasar el ratón por la imagen */
+.video-preview:hover img {
+    transform: scale(1.03);
+}
+
+/* Capa que contiene el icono de play */
+.capa-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.video-preview:hover .capa-play {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.capa-play .material-symbols-outlined {
+    font-size: 90px;
+    color: white;
+    opacity: 0.9;
+}
+
+/* El Pop-up (Fondo oscuro) */
+.popup-video-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor interno del video */
+.popup-video-interno {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción de cine */
+    background: black;
+}
+
+.popup-video-interno iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Botón de cerrar personalizado */
+.boton-cerrar-video {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+/* Fin CSS para el video preview */
+
+/* Selecciona el span que tiene el nombre del icono */
+.capa-play .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined'; /* Obliga a usar la fuente de iconos */
+    font-size: 80px;
+    color: white;
+    user-select: none; /* Evita que se pueda seleccionar el texto "play_circle" */
+    
+    /* Efecto de sombra para que resalte sobre cualquier imagen */
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+    transition: transform 0.2s ease;
+}
+
+/* Efecto visual al pasar el ratón */
+.video-preview:hover .material-symbols-outlined {
+    transform: scale(1.1);
+    color: #89BAFF; /* Cambia al azul de tu diseño de guía */
+}
