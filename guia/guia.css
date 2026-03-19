@@ -157,6 +157,12 @@ article{
     text-align: center;      /* 2. Centra el texto dentro del bloque */
 }
 
+.rutas,
+.descripcion,
+.info-contacto{
+    margin: 20px 70px;
+}
+
 .rutas, .contenedor-boton {
     padding: 0px 70px; /* Añade espaciado lateral para que se alineen con las secciones */
 }
