@@ -28,21 +28,40 @@
                     <input type="tel" id="telefono" name="telefono" placeholder="Value"> </div>
 
                 <div class="campo">
-                    <span class="label-mock">Nombre del guia</span>
-                    <span id="guiaVisual" style="font-weight: bold; margin-left: 10px;">Cargando...</span>
+                    <span class="label-mock">Nombre del guia:</span>
+                    <span id="guiaVisual" style="font-weight: bold; margin-left: 10px;"></span>
     
+                    <select id="selectGuiaManual" style="display:none;">
+                        <option value="" data-ciudad="" data-max="0">-- Selecciona Guía --</option>
+                        <option value="Manuel Perez" data-ciudad="Barcelona" data-max="15">Manuel Perez</option>
+                        <option value="Curro Jimenez" data-ciudad="Sevilla" data-max="10">Curro Jimenez</option>
+                        <option value="Javier Millán" data-ciudad="Madrid" data-max="20">Javier Millán</option>
+                        <option value="Lolo López" data-ciudad="Cádiz" data-max="12">Lolo López</option>
+                    </select>
+
                     <input type="hidden" id="nombreGuia" name="nombre_guia" value="">
+                    <input type="hidden" id="hiddenCiudad" name="guia_ciudad" value="">
+                    <input type="hidden" id="maxPersonasHidden" value="">
                 </div>
 
                 <div class="campo">
                     <span class="label-mock">Ciudad:</span>
-                    <span id="visualCiudad" style="font-weight: bold; margin-left: 10px;">Cargando...</span>
-                    <input type="hidden" id="hiddenCiudad" name="guia_ciudad">
-                </div>
-                
-                <div class="campo">
-                    <label for="personas">Numero personas</label>
-                    <input type="number" id="personas" name="personas" min="1" placeholder="Value" required> </div>
+                    <span id="visualCiudad" style="font-weight: bold; margin-left: 10px;"></span>
+    
+                <select id="selectCiudadManual" style="display:none;">
+                    <option value="">-- Todas las ciudades --</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Sevilla">Sevilla</option>
+                    <option value="Valencia">Valencia</option>
+                </select>
+</div>
+
+<div class="campo">
+    <label for="personas">Numero personas</label>
+    <input type="number" id="personas" name="personas" min="1" placeholder="Value" required>
+    <input type="hidden" id="maxPersonasHidden" value="">
+</div>
 
                 <div class="campo-fecha">
                     <label for="dia">Fecha</label>
