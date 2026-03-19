@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página - Noticias</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="noticias.css">
+</head>
+<body>
+
+    <nav>
+        <button id="btn-abrir-noticias" class="btn-nav">Noticias</button>
+    </nav>
+
+    <div id="overlay-noticias" class="overlay-noticias"></div>
+
+    <aside id="sidebar-noticias" class="sidebar-noticias">
+        <div class="sidebar-header">
+            <h2>Últimas Noticias</h2>
+            <button id="btn-cerrar-noticias" class="btn-cerrar">&times;</button>
+        </div>
+        
+        <div class="sidebar-content">
+            <article class="noticia-card">
+                <h3>Nueva actualización del sistema</h3>
+                <p>Hemos implementado mejoras en la velocidad de carga y nuevos colores en la interfaz de usuario.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+
+            <article class="noticia-card">
+                <h3>Mantenimiento programado</h3>
+                <p>El próximo fin de semana los servidores estarán inactivos por 2 horas debido a mantenimiento.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+
+            <article class="noticia-card">
+                <h3>¡Lanzamiento de nueva función!</h3>
+                <p>Descubre el nuevo panel de control personalizable, ahora disponible para todos los usuarios.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+        </div>
+    </aside>
+
+    <script src="noticias.js"></script>
+</body>
+</html>
