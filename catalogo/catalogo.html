@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="noticias.css">
     <link href = "catalogo.css" rel = "stylesheet" type="text/css">
     
     <script src="catalogo.js"></script>
@@ -140,7 +141,37 @@
     </a> 
 
 </section>
+<div id="overlay-noticias" class="overlay-noticias"></div>
+
+    <aside id="sidebar-noticias" class="sidebar-noticias">
+        <div class="sidebar-header">
+            <h2>Últimas Noticias</h2>
+            <button id="btn-cerrar-noticias" class="btn-cerrar">&times;</button>
+        </div>
+        
+        <div class="sidebar-content">
+            <article class="noticia-card">
+                <h3>Nueva actualización del sistema</h3>
+                <p>Hemos implementado mejoras en la velocidad de carga y nuevos colores en la interfaz de usuario.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+
+            <article class="noticia-card">
+                <h3>Mantenimiento programado</h3>
+                <p>El próximo fin de semana los servidores estarán inactivos por 2 horas debido a mantenimiento.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+
+            <article class="noticia-card">
+                <h3>¡Lanzamiento de nueva función!</h3>
+                <p>Descubre el nuevo panel de control personalizable, ahora disponible para todos los usuarios.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+        </div>
+    </aside>
 <div id="footer-container"></div>
 <script src="importar.js"></script>
+<script src="noticias.js"></script>
 </body>
 </html>
+
