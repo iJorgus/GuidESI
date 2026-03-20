@@ -5,7 +5,7 @@ GuidESI es un proyecto de desarrollo web  diseñado para conectar a viajeros con
 El equipo de desarrollo está compuesto por los alumnos/as:
 - Jorge Bolívar Blandino
 - Juan Fernández Gaviño
-- Annia Adamczyk
+- Anna Adamczyk
 
 
 **🤓👆 Ejecución del Proyecto**
