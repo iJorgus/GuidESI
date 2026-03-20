@@ -1,4 +1,4 @@
-h1{
+h1 {
     color: #0047AB;
     font-family: 'Outfit';
     font-size: 48px;
@@ -7,7 +7,8 @@ h1{
     margin: 0;
 }
 
-h2{
+/* MODIFICADO: Ahora solo afecta a los h2 dentro de las secciones de tu catálogo */
+section h2, .seleccion h2 {
     color: black;
     font-family: 'Inter';
     font-size: 24px;
@@ -15,7 +16,7 @@ h2{
     margin: 0;
 }
 
-body{
+body {
     background-color: white;
     font-family: 'Inter';
     font-size: 14px;
@@ -23,23 +24,25 @@ body{
     margin: 0px;
 }
 
-header{
+header {
     padding: 0px 70px;
 }
 
-section{
+section {
     background-color: #0047AB;
     display: flex;
 }
 
-article{
+/* MODIFICADO: Ahora solo afecta a los artículos dentro de la cuadrícula de guías, protegiendo las noticias */
+.guias article {
     background-color: white;
     padding: 20px;
     margin: 20px 50px;
 }
 
-img{
-    max-width: 100%;       /* Impide que la imagen sobresalga de su seccion */
+/* MODIFICADO: Protege otras imágenes de la web (como el logo o avatares futuros en noticias) */
+.guias article img {
+    max-width: 100%;       
     height: auto;
     border-radius: 50%;
     padding-bottom: 10px;
@@ -47,17 +50,16 @@ img{
     margin: auto;
 }
 
-.seleccion{
+.seleccion {
     background-color: white;
     padding: 10px 70px;
 }
 
-.guias{
+.guias {
     padding: 70px 70px;
     display: grid;
-    /* Crea 4 columnas del mismo tamaño automáticamente */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; /* Espacio entre artículos */
+    gap: 20px; 
 }
 
 .enlace-articulo {
@@ -65,21 +67,17 @@ img{
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    
-    /* 1. Preparamos la transición para que no sea un salto brusco */
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
                 box-shadow 0.3s ease;
 }
 
-/* 2. El efecto al pasar el mouse */
 .enlace-articulo:hover {
-    transform: scale(1.03);                         /* Se agranda un 3% */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);    /* Crea sombra de "elevación" */
+    transform: scale(1.03);                         
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);    
 }
 
-/* 3. Opcional: El efecto al hacer click (Feedback táctil) */
 .enlace-articulo:active {
-    transform: scale(0.98); /* Se encoge un poco al presionar */
+    transform: scale(0.98); 
 }
 
 .ocultar-guia {
@@ -94,10 +92,10 @@ img{
 
 .info-guia th {
     text-align: left;
-    font-weight: bold; /* Esto sustituye a tu clase .negrita */
-    color: #0047AB;    /* Usando tu azul para destacar las etiquetas */
+    font-weight: bold; 
+    color: #0047AB;    
     padding: 8px 0;
-    width: 45%;        /* Ajusta el ancho de la columna izquierda */
+    width: 45%;        
     border-bottom: 1px solid #eee;
 }
 
@@ -107,7 +105,6 @@ img{
     border-bottom: 1px solid #eee;
 }
 
-/* Ocultar titulos de h? */
 .hidden-title {
     position: absolute;
     width: 1px;
@@ -119,23 +116,26 @@ img{
     border: 0;
 }
 
+/* =========================================
+   Responsive 
+   ========================================= */
 @media (max-width: 768px) {
     section {
         flex-direction: column;
-        align-items: center;    /* Centra la foto y el texto */
+        align-items: center;    
         text-align: center;
     }
 
-    /* Ajustar los márgenes para móviles */
     header, 
     .seleccion, 
     .guias {
-        padding: 20px 20px; /* Reducimos de 70px a 20px */
+        padding: 20px 20px; 
     }
 
-    article {
-        margin: 10px 0;     /* Quitamos el margen lateral de 50px que causaba huecos blancos */
-        width: 100%;        /* Asegura que ocupe el ancho disponible */
+    /* MODIFICADO: También aseguramos que el responsivo solo se aplique a los articles del catálogo */
+    .guias article {
+        margin: 10px 0;     
+        width: 100%;        
         box-sizing: border-box;
     }
 
@@ -144,13 +144,11 @@ img{
         gap: 10px;
     }
 
-    /*  Ajuste de textos para que no se vean gigantes */
     h1 {
         font-size: 32px;
         padding: 30px 0 10px;
     }
 
-    /* 6. Móviles muy pequeños 1 sola columna */
     @media (max-width: 480px) {
         .guias {
             grid-template-columns: 1fr;
