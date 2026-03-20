@@ -1,4 +1,4 @@
-h1{
+h1 {
     color: #0047AB;
     font-family: 'Outfit';
     font-size: 48px;
@@ -7,7 +7,8 @@ h1{
     margin: 0;
 }
 
-h2{
+/* MODIFICADO: Limitamos los h2 a las secciones de la guía para no afectar al título "Últimas Noticias" */
+section h2, .rutas h2, .descripcion h2, .info-contacto h2 {
     color: black;
     font-family: 'Inter';
     font-size: 24px;
@@ -15,7 +16,8 @@ h2{
     margin: 0;
 }
 
-h3{
+/* MODIFICADO: Limitamos los h3 para no quitarle el color y fuente a los títulos de cada noticia */
+section h3, .contenedor-resenas h3, .rutas h3 {
     color: black;
     font-family: 'Inter';
     font-size: 18px;
@@ -23,7 +25,7 @@ h3{
     margin: 0;
 }
 
-body{
+body {
     background-color: white;
     font-family: 'Inter';
     font-size: 14px;
@@ -31,19 +33,21 @@ body{
     margin: 0px;
 }       
 
-section{
+section {
     background-color: #E0F7FF;
     padding: 20px 70px;
     margin: 0;
 }
 
-ul{
+/* MODIFICADO: Especificamos que solo modifique las listas dentro de una sección */
+section ul {
     list-style-type: none; /* Quita los puntos */
     padding: 10px;           
     margin: 0;             
 }
 
-article{
+/* MODIFICADO (CRÍTICO): Ahora esto solo afecta a las tarjetas de reseñas, ignorando las tarjetas de noticias */
+.contenedor-resenas article {
     background-color: white;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -53,15 +57,15 @@ article{
     margin: 0;             /* Quitamos el margen manual */
 }
 
-.texto-descripcion{
+.texto-descripcion {
     padding: 0px 20px;
 }
 
-.resenas{
+.resenas {
     background-color: white;
 }
 
-.contenedor-resenas{
+.contenedor-resenas {
     background-color: white;
     display: flex;              /* Muestra por fila */
     flex-wrap: wrap;            /* Para que bajen si no caben */
@@ -70,14 +74,13 @@ article{
     width: 100%;                /* Ocupa todo el ancho de la section */
 }
 
-
 /* Configuración base para todos los iconos */
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     color: #0047AB;
 }
 
-.icono-pequeno{
+.icono-pequeno {
     font-size: 14px !important;
 }
 
@@ -87,27 +90,27 @@ article{
     color: #AD9300;
 }
 
-.rojo{ color: red;}
-.verde{ color: green;}
-.azul{ color: blue;}
-.morado{ color: purple;}
-.naranja{ color: orange;}
-.gris{ color: gray;}
+.rojo { color: red; }
+.verde { color: green; }
+.azul { color: blue; }
+.morado { color: purple; }
+.naranja { color: orange; }
+.gris { color: gray; }
 
-#nota-media{
+#nota-media {
     font-size: 28px;
     font-weight: 800;
     color: #0047AB;
 }
 
-.rutas{
+.rutas {
     display: flex;
     background-color: white;
     gap: 10px;
     margin-top: 10px;
 }
 
-.mapa{
+.mapa {
     margin-left: auto;
     background-color: white;
     padding: 0px;
@@ -116,7 +119,7 @@ article{
     gap: 10px;
 }
 
-.boton-mapa{
+.boton-mapa {
     font-size: large;
     border-radius: 20px;
     background-color: #89BAFF;
@@ -132,11 +135,11 @@ article{
     margin-bottom: 20px;    /* Separa esta cabecera de los testimonios de abajo */
 }
 
-.contenedor-boton{
+.contenedor-boton {
     background-color: white;
 }
 
-.boton-reserva{
+.boton-reserva {
     background-color: #0047AB;
     color: white;
     font-size: 28px;
@@ -144,22 +147,19 @@ article{
     outline: none;           /* Quita el contorno al hacer clic */
     cursor: pointer;         /* Hace que aparezca la "manita" al pasar el ratón */
     font-family: inherit;    /* Obliga al botón a usar la misma letra que tu sección */
-
     padding: 18px;            
     border-radius: 8px;
     box-sizing: border-box;   /* Evita que el padding lo haga más grande que la pantalla */
-
     display: block;
     width: 100%;
     transition: 0.3s;
-
     text-decoration: none;   /* 1. Quita el subrayado del link */
     text-align: center;      /* 2. Centra el texto dentro del bloque */
 }
 
 .rutas,
 .descripcion,
-.info-contacto{
+.info-contacto {
     margin: 20px 70px;
 }
 
@@ -188,8 +188,6 @@ article{
     border-radius: 4px;
     width: 60%;   /* Ocupa casi todo el ancho de la pantalla */
     height: 85%;  /* Ocupa casi todo el alto de la pantalla */
-    
-    /* Centramos el contenido por si la imagen no es tan grande */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,7 +250,7 @@ article{
         padding: 20px !important;
     }
 
-    .rutas{
+    .rutas {
         margin: 10px;
     }
 
@@ -268,7 +266,8 @@ article{
         gap: 20px; /* Menos espacio entre tarjetas */
     }
 
-    article {
+    /* MODIFICADO: También protegemos el aside en la versión móvil */
+    .contenedor-resenas article {
         max-width: 100%;
         flex: 1 1 100%; /* Una sola columna de reseñas */
         margin: 0;
