@@ -1,6 +1,7 @@
 GuidESI es un proyecto de desarrollo web  diseñado para conectar a viajeros con guías turísticos profesionales.
 
 **👥 Integrantes del Proyecto**
+
 El equipo de desarrollo está compuesto por los alumnos/as:
 - Jorge Bolívar Blandino
 - Juan Fernández Gaviño
