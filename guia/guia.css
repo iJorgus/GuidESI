@@ -1,95 +1,141 @@
 h1 {
+    /* Color azul corporativo para el título principal de la página (ej: nombre del guía) */
     color: #0047AB;
+    /* Fuente destacada para títulos */
     font-family: 'Outfit';
+    /* Tamaño muy grande, 48px, para que quede claro que es el título principal */
     font-size: 48px;
+    /* Negrita gruesa (bold) */
     font-weight: 700;
+    /* Espaciado interno: 30px arriba/abajo, 70px a los lados para alinear con el resto del contenido */
     padding: 30px 70px;
+    /* Reseteo del margen por defecto del navegador */
     margin: 0;
 }
 
 /* MODIFICADO: Limitamos los h2 a las secciones de la guía para no afectar al título "Últimas Noticias" */
+/* Agrupamos varios selectores para aplicar el mismo estilo a los subtítulos de estas secciones específicas */
 section h2, .rutas h2, .descripcion h2, .info-contacto h2 {
+    /* Color negro estándar para subtítulos */
     color: black;
+    /* Fuente de texto normal para lectura */
     font-family: 'Inter';
+    /* Tamaño moderado, 24px, claramente más pequeño que el h1 */
     font-size: 24px;
+    /* Aseguramos alineación a la izquierda */
     text-align: left;
+    /* Quitamos márgenes por defecto para controlar el espaciado con las clases contenedoras */
     margin: 0;
 }
 
 /* MODIFICADO: Limitamos los h3 para no quitarle el color y fuente a los títulos de cada noticia */
+/* Estos h3 actúan como subtítulos de tercer nivel (ej: nombres de usuarios en las reseñas) */
 section h3, .contenedor-resenas h3, .rutas h3 {
     color: black;
     font-family: 'Inter';
+    /* Tamaño más pequeño que el h2 (18px) para mantener la jerarquía visual */
     font-size: 18px;
     text-align: left;
     margin: 0;
 }
 
 body {
+    /* Fondo general de la página blanco */
     background-color: white;
+    /* Fuente base para todo el documento */
     font-family: 'Inter';
+    /* Tamaño de texto estándar para lectura */
     font-size: 14px;
+    /* Grosor medio (medium) */
     font-weight: 500;
+    /* Quitamos el margen del body para que el contenido toque los bordes de la ventana */
     margin: 0px;
 }       
 
 section {
+    /* Fondo azul muy clarito para las secciones principales (ej: la cabecera con la foto del guía) */
     background-color: #E0F7FF;
+    /* Espaciado interno generoso, alineado con los 70px laterales del h1 */
     padding: 20px 70px;
     margin: 0;
 }
 
 /* MODIFICADO: Especificamos que solo modifique las listas dentro de una sección */
+/* Esto afectará a listas de idiomas, características, etc., dentro del perfil del guía */
 section ul {
-    list-style-type: none; /* Quita los puntos */
+    /* Quita los puntos típicos de las listas desordenadas (bullets) */
+    list-style-type: none; 
+    /* Añade un pequeño padding para que no se pegue al borde */
     padding: 10px;           
     margin: 0;             
 }
 
 /* MODIFICADO (CRÍTICO): Ahora esto solo afecta a las tarjetas de reseñas, ignorando las tarjetas de noticias */
+/* Estilo para las tarjetas individuales donde los usuarios dejan sus comentarios */
 .contenedor-resenas article {
     background-color: white;
+    /* Espacio interno dentro de la tarjeta de la reseña */
     padding: 20px;
+    /* Sombra suave alrededor de la tarjeta para que "flote" sobre el fondo */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;    /* Bordes redondeados */
-    flex: 1 1 350px;       /* Crece, se encoge y su tamaño ideal son 300px */
-    max-width: 600px;      /* No permitas que se estire demasiado */
-    margin: 0;             /* Quitamos el margen manual */
+    /* Bordes redondeados para un diseño más amigable y moderno */
+    border-radius: 16px;    
+    /* Propiedad Flexbox: flex-grow(1), flex-shrink(1), flex-basis(350px). 
+       Significa que la tarjeta intentará medir 350px, pero puede crecer o encogerse si es necesario */
+    flex: 1 1 350px;       
+    /* Límite máximo de ancho para que en pantallas gigantes la reseña no sea una línea infinita de texto */
+    max-width: 600px;      
+    /* Quitamos el margen manual porque el espaciado lo manejará el 'gap' del contenedor padre */
+    margin: 0;             
 }
 
 .texto-descripcion {
+    /* Añade un poco de sangría al texto descriptivo de la guía */
     padding: 0px 20px;
 }
 
 .resenas {
+    /* Fuerza el fondo de la sección general de reseñas a blanco (sobrescribiendo el azul clarito de 'section') */
     background-color: white;
 }
 
+/* Contenedor que agrupa todas las tarjetas de reseñas */
 .contenedor-resenas {
     background-color: white;
-    display: flex;              /* Muestra por fila */
-    flex-wrap: wrap;            /* Para que bajen si no caben */
-    justify-content: center;    /* Centra el grupo de artículos */
-    gap: 50px;                  /* Espacio exacto ENTRE artículos */
-    width: 100%;                /* Ocupa todo el ancho de la section */
+    /* Activa flexbox para colocar las tarjetas en una fila o cuadrícula flexible */
+    display: flex;              
+    /* Permite que las tarjetas salten a la siguiente línea si no caben horizontalmente (vital para responsive) */
+    flex-wrap: wrap;            
+    /* Centra el grupo de tarjetas dentro del contenedor si sobra espacio a los lados */
+    justify-content: center;    
+    /* Establece un espacio fijo de 50px ENTRE cada tarjeta de reseña (tanto en horizontal como en vertical al hacer wrap) */
+    gap: 50px;                  
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
+    width: 100%;                
 }
 
-/* Configuración base para todos los iconos */
+/* Configuración base para todos los iconos de Google Material Symbols */
 .material-symbols-outlined {
+    /* Define variaciones de la fuente del icono: sin relleno (FILL 0), peso normal (wght 400), sin gradiente, tamaño óptico 24 */
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    /* Color azul por defecto para los iconos */
     color: #0047AB;
 }
 
 .icono-pequeno {
+    /* Fuerza a que ciertos iconos se muestren en un tamaño pequeño específico (ej: estrellitas) */
     font-size: 14px !important;
 }
 
-/* Clase específica para rellenar */
+/* Clase específica para rellenar los iconos (ej: para una estrella rellena indicando puntuación) */
 .relleno {
-    font-variation-settings: 'FILL' 1;  /* Esto activa el relleno */
+    /* Cambia la variación a 'FILL' 1 para que el icono de Material Design se pinte por dentro */
+    font-variation-settings: 'FILL' 1;  
+    /* Color dorado/amarillo oscuro para las estrellas rellenas */
     color: #AD9300;
 }
 
+/* Clases de utilidad simples para colorear textos o iconos puntualmente */
 .rojo { color: red; }
 .verde { color: green; }
 .azul { color: blue; }
@@ -97,132 +143,179 @@ section ul {
 .naranja { color: orange; }
 .gris { color: gray; }
 
+/* Estilo súper destacado para mostrar el número de la puntuación media (ej: 4.8) */
 #nota-media {
     font-size: 28px;
+    /* Fuente extra gruesa (extrabold) */
     font-weight: 800;
     color: #0047AB;
 }
 
+/* Contenedor para mostrar rutas o información similar en bloque horizontal */
 .rutas {
     display: flex;
     background-color: white;
+    /* Espacio entre los elementos de la ruta (ej: nombre de la ruta y botón de mapa) */
     gap: 10px;
+    /* Pequeño margen superior para separarlo del elemento anterior */
     margin-top: 10px;
 }
 
+/* Contenedor específico para el botón del mapa dentro de las rutas */
 .mapa {
+    /* Empuja este elemento a la derecha del todo usando flexbox (ocupa el espacio restante a la izquierda como margen) */
     margin-left: auto;
     background-color: white;
     padding: 0px;
     display: flex;
-    align-items: center;        /* Alinea el botón y el icono verticalmente */
+    /* Alinea el texto del botón y el posible icono verticalmente en el centro */
+    align-items: center;        
     gap: 10px;
 }
 
+/* Estilo del botón para abrir el mapa emergente */
 .boton-mapa {
     font-size: large;
+    /* Bordes muy redondeados, casi forma de píldora */
     border-radius: 20px;
+    /* Color azul pastel */
     background-color: #89BAFF;
+    /* Quita el borde nativo del botón */
     border: none;
+    /* Espacio interno para que el botón no quede enano (8px vertical, 16px horizontal) */
     padding: 8px 16px;
+    /* Cambia el cursor para indicar que es clicable */
     cursor: pointer;
 }
 
+/* Encabezado de la sección de reseñas (donde sale la nota media global y las estrellas globales) */
 .cabecera-resenas {
-    display: flex;         /* Activa la fila */
-    align-items: center;    /* Centra verticalmente el 4.3 con las estrellas */
-    gap: 15px;             /* Deja un espacio elegante entre el número y las estrellas */
-    margin-bottom: 20px;    /* Separa esta cabecera de los testimonios de abajo */
+    /* Activa flexbox para poner el número y las estrellas en línea */
+    display: flex;         
+    /* Centra verticalmente el número gigante con las estrellas más pequeñas */
+    align-items: center;    
+    /* Deja un espacio elegante entre el número y las estrellas */
+    gap: 15px;             
+    /* Separa esta cabecera global de la cuadrícula de testimonios individuales que va debajo */
+    margin-bottom: 20px;    
 }
 
+/* Contenedor específico (seguramente un wrapper) para el botón gigante de reserva */
 .contenedor-boton {
     background-color: white;
 }
 
+/* El botón principal de llamada a la acción (Call to Action - CTA) para reservar al guía */
 .boton-reserva {
-    background-color: #0047AB;
+    background-color: #0047AB; /* Azul corporativo fuerte para destacar */
     color: white;
-    font-size: 28px;
-    border: none;            /* Quita el borde gris por defecto */
-    outline: none;           /* Quita el contorno al hacer clic */
-    cursor: pointer;         /* Hace que aparezca la "manita" al pasar el ratón */
-    font-family: inherit;    /* Obliga al botón a usar la misma letra que tu sección */
-    padding: 18px;            
-    border-radius: 8px;
-    box-sizing: border-box;   /* Evita que el padding lo haga más grande que la pantalla */
-    display: block;
-    width: 100%;
-    transition: 0.3s;
-    text-decoration: none;   /* 1. Quita el subrayado del link */
-    text-align: center;      /* 2. Centra el texto dentro del bloque */
+    font-size: 28px; /* Texto muy grande y visible */
+    border: none;            /* Quita el borde gris por defecto de los botones HTML */
+    outline: none;           /* Quita el contorno azul que ponen los navegadores al hacer clic o enfocar con teclado */
+    cursor: pointer;         /* Hace que aparezca el click al pasar el ratón */
+    font-family: inherit;    /* Obliga al botón a usar la misma fuente que su contenedor padre (Inter) */
+    padding: 18px;           /* Botón muy grande, fácil de tocar */
+    border-radius: 8px;      /* Bordes ligeramente redondeados, moderno pero menos redondo que el de mapa */
+    box-sizing: border-box;  /* El padding se calcula hacia dentro, evita que el botón desborde su contenedor al ponerle width 100% */
+    display: block;          /* Se comporta como un bloque, forzando saltos de línea y permitiendo width 100% real */
+    width: 100%;             /* El botón ocupa todo el ancho disponible, ideal para móviles */
+    transition: 0.3s;        /* Transición suave por si se añade un efecto :hover luego */
+    text-decoration: none;   /* 1. Si el botón es realmente un <a>, esto quita el subrayado del link */
+    text-align: center;      /* 2. Centra el texto "Reservar" dentro del botón */
 }
 
+/* Aplicamos los mismos márgenes laterales de 70px a estas secciones para alinear todo el diseño en desktop */
 .rutas,
 .descripcion,
 .info-contacto {
     margin: 20px 70px;
 }
 
+/* Ajustes específicos de padding lateral para alinear el contenido interno */
 .rutas, .contenedor-boton {
-    padding: 0px 70px; /* Añade espaciado lateral para que se alineen con las secciones */
+    padding: 0px 70px; /* Añade espaciado lateral para que se alineen con el contenido de las secciones adyacentes */
 }
 
-/* Fondo oscuro que cubre toda la pantalla */
+/* MODAL / POPUP: Fondo oscuro que cubre toda la pantalla para oscurecer la página por detrás */
 #popup-container {
-    display: none; /* Oculto por defecto */
+    display: none; /* Oculto por defecto mediante CSS. JavaScript cambiará esto a 'flex' para mostrarlo */
+    /* Posición fija: se queda clavado en la pantalla aunque hagas scroll */
     position: fixed;
+    /* Lo anclamos a la esquina superior izquierda */
     top: 0;
     left: 0;
+    /* Le decimos que ocupe todo el alto y ancho del navegador (el viewport) */
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    /* Fondo negro con 80% de opacidad (rgba: Red, Green, Blue, Alpha) */
+    background-color: rgba(0, 0, 0, 0.8); 
+    /* Un z-index altísimo garantiza que este div se pinte por encima de TODO lo demás en la página */
     z-index: 1000;
+    /* Al cambiar a 'flex' con JS, esto centrará el contenido del popup horizontalmente */
     justify-content: center;
+    /* Y esto lo centrará verticalmente */
     align-items: center;
 }
 
+/* Contenedor blanco (la ventana emergente real) dentro del fondo oscuro */
 .popup-contenido {
+    /* Relative permite que el botón de cerrar absoluto se posicione respecto a esta ventana, y no respecto a la pantalla entera */
     position: relative;
     background: white;
+    /* Un pequeño padding que hará de marco blanco alrededor de la imagen */
     padding: 5px;
     border-radius: 4px;
-    width: 60%;   /* Ocupa casi todo el ancho de la pantalla */
-    height: 85%;  /* Ocupa casi todo el alto de la pantalla */
+    /* Tamaño dinámico: ocupa el 60% del ancho de la ventana... */
+    width: 60%;   
+    /* ...y el 85% del alto de la ventana */
+    height: 85%;  
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;           /* Evita que la imagen se salga si es enorme */
+    /* Si la imagen que metemos dentro es por algún motivo más grande que el 60x85%, se recorta y no desborda la ventana blanca */
+    overflow: hidden;            
 }
 
-/* CSS del pop up del mapa */
+/* CSS del pop up del mapa: Configuración para la imagen (el mapa) que va dentro de la ventana emergente */
 .popup-contenido img {
+    /* La imagen intenta ocupar todo el espacio disponible dentro de .popup-contenido */
     width: 100%;
     height: 100%;
+    /* FUNDAMENTAL: object-fit: contain asegura que la imagen se escale para caber entera sin deformarse, dejando bandas blancas si la proporción no cuadra. */
     object-fit: contain;
     display: block;
 }
 
-/* Botón de cerrar (la X) */
+/* Botón de cerrar (la X) del popup */
 #cerrar-popup {
+    /* Se posiciona de forma absoluta respecto a su contenedor padre (.popup-contenido) */
     position: absolute;
-    top: 10px;  /* Un poco separada del borde */
+    /* Lo fijamos en la esquina superior derecha de la ventana blanca */
+    top: 10px;  
     right: 10px;
-    background: rgba(255, 0, 0, 0.7); /* Rojo semitransparente */
+    /* Fondo rojo semitransparente para que llame la atención de forma sutil */
+    background: rgba(255, 0, 0, 0.7); 
     color: white;
-    width: 35px; /* Un pelín más grande para que sea fácil dar click */
+    /* Tamaño generoso (35x35) para que sea fácil darle con el dedo en móviles */
+    width: 35px; 
     height: 35px;
+    /* Lo hacemos completamente redondo */
     border-radius: 50%;
+    /* Centramos el texto (la "X") horizontalmente */
     text-align: center;
+    /* Centramos el texto verticalmente igualando el line-height a la altura del botón */
     line-height: 35px;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
-    z-index: 1010; /* Por encima de la imagen */
+    /* Z-index alto para asegurarnos de que el botón de cerrar siempre está por encima de la imagen del mapa */
+    z-index: 1010; 
 }
 /* Fin del CSS del pop up */
 
-/* Ocultar titulos de hX */
+/* Ocultar titulos de hX: Técnica de accesibilidad */
 .hidden-title {
+    /* Esta clase oculta el texto visualmente pero lo mantiene en el código para que los lectores de pantalla (para personas ciegas) lo lean. Es mejor para SEO y accesibilidad que usar display:none */
     position: absolute;
     width: 1px;
     height: 1px;
@@ -233,48 +326,63 @@ section ul {
     border: 0;
 }
 
+/* MEDIA QUERIES: Reglas que se aplican SOLO cuando la pantalla es de 768px o menos (tablets verticales y móviles) */
 @media (max-width: 768px) {
     body {
+        /* Aseguramos que no haya márgenes raros en móvil */
         margin: 0;
         padding: 0;
     }
 
     /* 2. AJUSTE DE CABECERA (Reducimos el padding gigante de 70px) */
     h1 {
+        /* El título de 48px es muy grande para móvil, lo bajamos a 32px */
         font-size: 32px;
+        /* Reducimos radicalmente el padding lateral para no desperdiciar espacio en pantallas estrechas */
         padding: 40px 20px 20px;
+        /* En móvil los títulos suelen quedar mejor centrados */
         text-align: center;
     }
 
+    /* Sobrescribimos el padding lateral de 70px a 20px en todos estos contenedores clave */
+    /* El !important fuerza la regla por si hay algún problema de especificidad en CSS */
     section, .seleccion, .guias {
         padding: 20px !important;
     }
 
     .rutas {
+        /* Reducimos el margen de las rutas en móvil */
         margin: 10px;
     }
 
     .boton-reserva {
-        padding: 30px 20px !important; /* Más alto para el pulgar */
-        font-size: 32px !important;    /* Letra más grande */
-        border-radius: 15px;
+        /* Hacemos el botón de reserva aún más grande y alto en móvil. Área táctil ("hitbox") inmensa para el pulgar */
+        padding: 30px 20px !important; 
+        font-size: 32px !important;    
+        border-radius: 15px; /* Lo redondeamos un poco más */
         margin-top: 20px;
+        /* Aseguramos que siga ocupando el 100% del ancho */
         width: 100%;
     }
 
     .contenedor-resenas {
-        gap: 20px; /* Menos espacio entre tarjetas */
+        /* Reducimos el tremendo espacio de 50px entre reseñas a 20px para no hacer tanto scroll en el móvil */
+        gap: 20px; 
     }
 
     /* MODIFICADO: También protegemos el aside en la versión móvil */
     .contenedor-resenas article {
+        /* Las reseñas ya no tienen ancho máximo */
         max-width: 100%;
-        flex: 1 1 100%; /* Una sola columna de reseñas */
+        /* flex-basis a 100% fuerza a que cada tarjeta de reseña ocupe toda la fila. Crea una sola columna vertical */
+        flex: 1 1 100%; 
         margin: 0;
     }
 
     .popup-contenido {
+        /* En móvil, el 60% de ancho dejaba la imagen diminuta. Lo subimos al 95% para aprovechar la pantalla */
         width: 95%;
+        /* Reducimos un poco el alto para que la "X" de cerrar no se quede pegada al borde superior del móvil */
         height: 70%;
     }
 }
