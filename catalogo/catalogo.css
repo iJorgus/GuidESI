@@ -1,156 +1,233 @@
 h1 {
+    /* Define el color del texto para los títulos principales h1 usando un valor hexadecimal (azul) */
     color: #0047AB;
+    /* Establece 'Outfit' como la fuente principal para estos títulos */
     font-family: 'Outfit';
+    /* Fija el tamaño de la fuente a 48 píxeles */
     font-size: 48px;
+    /* Define el grosor de la fuente a 700, lo que equivale a negrita (bold) */
     font-weight: 700;
+    /* Añade espacio interior: 60px arriba, 0 a los lados, y 10px abajo */
     padding: 60px 0px 10px;
+    /* Elimina el margen exterior por defecto del navegador */
     margin: 0;
 }
 
-/* MODIFICADO: Ahora solo afecta a los h2 dentro de las secciones de tu catálogo */
+/* MODIFICADO: Definido así para que no interfiera con noticias*/
 section h2, .seleccion h2 {
+    /* Establece el color del texto en negro para los subtítulos h2 específicos */
     color: black;
+    /* Usa la fuente 'Inter' para estos elementos */
     font-family: 'Inter';
+    /* Fija el tamaño del texto a 24 píxeles */
     font-size: 24px;
+    /* Alinea el texto a la izquierda */
     text-align: left;
+    /* Elimina los márgenes exteriores por defecto */
     margin: 0;
 }
 
 body {
+    /* Establece el fondo de toda la página en blanco */
     background-color: white;
+    /* Define 'Inter' como la fuente predeterminada para el cuerpo del documento */
     font-family: 'Inter';
+    /* Fija un tamaño de fuente base de 14 píxeles */
     font-size: 14px;
+    /* Establece un grosor de fuente medio (500) */
     font-weight: 500;
+    /* Elimina el margen por defecto del body para que el contenido ocupe todo el ancho */
     margin: 0px;
 }
 
 header {
+    /* Añade espacio interior al encabezado: 0 arriba/abajo y 70px a izquierda/derecha */
     padding: 0px 70px;
 }
 
 section {
+    /* Define el color de fondo azul para las etiquetas <section> */
     background-color: #0047AB;
+    /* Utiliza flexbox para permitir una disposición flexible del contenido interno */
     display: flex;
 }
 
 /* MODIFICADO: Ahora solo afecta a los artículos dentro de la cuadrícula de guías, protegiendo las noticias */
 .guias article {
+    /* Establece fondo blanco para los artículos dentro del contenedor con clase 'guias' */
     background-color: white;
+    /* Añade un espacio interior de 20 píxeles por todos los lados */
     padding: 20px;
+    /* Añade un margen exterior de 20px arriba/abajo y 50px izquierda/derecha */
     margin: 20px 50px;
 }
 
 /* MODIFICADO: Protege otras imágenes de la web (como el logo o avatares futuros en noticias) */
 .guias article img {
+    /* Asegura que la imagen no sea más ancha que su contenedor (el artículo) */
     max-width: 100%;       
+    /* Mantiene las proporciones de la imagen al ajustar su ancho */
     height: auto;
+    /* Hace que las imágenes sean completamente redondas (círculos perfectos) */
     border-radius: 50%;
+    /* Añade un espacio en la parte inferior de la imagen de 10 píxeles */
     padding-bottom: 10px;
+    /* Comporta a la imagen como un bloque, permitiendo aplicar márgenes automáticos para centrarla */
     display: block;
+    /* Centra horizontalmente la imagen dentro del artículo */
     margin: auto;
 }
 
 .seleccion {
+    /* Establece fondo blanco para el contenedor con la clase 'seleccion' */
     background-color: white;
+    /* Añade espacio interior: 10px arriba/abajo, 70px izquierda/derecha */
     padding: 10px 70px;
 }
 
 .guias {
+    /* Añade un padding amplio de 70px por todos los lados del contenedor principal de guías */
     padding: 70px 70px;
+    /* Utiliza CSS Grid para crear un diseño de cuadrícula */
     display: grid;
+    /* Define la cuadrícula con 4 columnas del mismo ancho (1 fracción del espacio disponible cada una) */
     grid-template-columns: repeat(4, 1fr); 
+    /* Establece un espacio de 20 píxeles entre los elementos de la cuadrícula */
     gap: 20px; 
 }
 
 .enlace-articulo {
+    /* Convierte el enlace en un bloque para que ocupe el ancho disponible y se le apliquen márgenes/padding correctamente */
     display: block;
+    /* Elimina el subrayado predeterminado de los enlaces */
     text-decoration: none;
+    /* Hace que el enlace herede el color de texto de su elemento padre */
     color: inherit;
+    /* Cambia el cursor a una 'mano' para indicar que es clicable */
     cursor: pointer;
+    /* Suaviza las animaciones de escala (transform) y sombra (box-shadow) a lo largo de 0.3 segundos con una curva de aceleración específica */
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
                 box-shadow 0.3s ease;
 }
 
 .enlace-articulo:hover {
-    transform: scale(1.03);                         
+    /* Aumenta el tamaño del elemento a un 103% cuando el usuario pasa el ratón por encima (efecto zoom in) */
+    transform: scale(1.03);                                  
+    /* Añade una sombra suave para dar sensación de profundidad y hacer que el elemento "flote" */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);    
 }
 
 .enlace-articulo:active {
+    /* Reduce ligeramente el tamaño del elemento al 98% cuando se hace clic en él (efecto de pulsación) */
     transform: scale(0.98); 
 }
 
 .ocultar-guia {
+    /* Oculta completamente el elemento del flujo de la página. El '!important' fuerza que se aplique sobre otras reglas */
     display: none !important;
 }
 
 .info-guia table {
+    /* Hace que la tabla ocupe todo el ancho disponible de su contenedor */
     width: 100%;
+    /* Elimina el espacio entre los bordes de las celdas contiguas */
     border-collapse: collapse;
+    /* Añade una separación de 15px en la parte superior de la tabla */
     margin-top: 15px;
 }
 
 .info-guia th {
+    /* Alinea el texto de las cabeceras a la izquierda */
     text-align: left;
+    /* Pone el texto de las cabeceras en negrita */
     font-weight: bold; 
+    /* Define el color del texto de la cabecera a azul */
     color: #0047AB;    
+    /* Añade un padding de 8px arriba y abajo, 0 a los lados */
     padding: 8px 0;
+    /* Asigna a las cabeceras un ancho del 45% de la tabla */
     width: 45%;        
+    /* Añade una línea sutil de color gris claro debajo de cada celda de cabecera */
     border-bottom: 1px solid #eee;
 }
 
 .info-guia td {
+    /* Añade padding a las celdas normales: 8px arriba/abajo, 0 a los lados */
     padding: 8px 0;
+    /* Alinea el contenido de las celdas normales a la izquierda */
     text-align: left;
+    /* Añade una línea sutil debajo de cada celda normal, igual que en las cabeceras */
     border-bottom: 1px solid #eee;
 }
 
 .hidden-title {
+    /* Esta clase oculta el texto visualmente pero lo mantiene accesible para lectores de pantalla (para SEO o accesibilidad) */
+    /* Lo saca del flujo normal del documento */
     position: absolute;
+    /* Lo hace de 1x1 pixel */
     width: 1px;
     height: 1px;
+    /* Quita el padding */
     padding: 0;
+    /* Márgenes negativos para ocultarlo aún más */
     margin: -1px;
+    /* Esconde cualquier contenido que desborde el área de 1x1 */
     overflow: hidden;
+    /* Recorta la región visible a un área nula */
     clip: rect(0, 0, 0, 0);
+    /* Quita los bordes */
     border: 0;
 }
 
 /* =========================================
    Responsive 
    ========================================= */
+/* Aplica estas reglas cuando la pantalla tiene un ancho máximo de 768 píxeles (tablets y móviles) */
 @media (max-width: 768px) {
     section {
+        /* Cambia la dirección del flexbox a columnas, apilando los elementos verticalmente */
         flex-direction: column;
+        /* Centra los elementos a lo largo del eje transversal (horizontal en este caso) */
         align-items: center;    
+        /* Centra el texto dentro de la sección */
         text-align: center;
     }
 
     header, 
     .seleccion, 
     .guias {
+        /* Reduce el padding lateral de 70px a 20px para pantallas pequeñas */
         padding: 20px 20px; 
     }
 
     /* MODIFICADO: También aseguramos que el responsivo solo se aplique a los articles del catálogo */
     .guias article {
+        /* Reduce el margen lateral a 0 y el superior/inferior a 10px */
         margin: 10px 0;     
+        /* Hace que el artículo ocupe todo el ancho disponible */
         width: 100%;        
+        /* Asegura que el padding no aumente el ancho total del artículo, manteniéndolo en 100% */
         box-sizing: border-box;
     }
 
     .guias {
+        /* Cambia la cuadrícula de 4 columnas a 2 columnas para pantallas medianas */
         grid-template-columns: repeat(2, 1fr);
+        /* Reduce el espacio entre elementos de 20px a 10px */
         gap: 10px;
     }
 
     h1 {
+        /* Reduce el tamaño del título principal de 48px a 32px para mejorar la lectura en pantallas pequeñas */
         font-size: 32px;
+        /* Ajusta el padding superior del título principal */
         padding: 30px 0 10px;
     }
 
+    /* Aplica estas reglas adicionales cuando la pantalla es aún más pequeña, ancho máximo 480 píxeles (teléfonos móviles en vertical) */
     @media (max-width: 480px) {
         .guias {
+            /* Cambia la cuadrícula a una sola columna, apilando los artículos uno debajo del otro */
             grid-template-columns: 1fr;
         }
     }
