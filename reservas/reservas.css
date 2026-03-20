@@ -1,77 +1,112 @@
-
 body {
+    /* Establece la fuente principal 'Inter' para asegurar buena legibilidad en toda la página */
     font-family: 'Inter';
+    /* Fondo blanco puro para contrastar bien con los campos del formulario */
     background-color: #ffffff;
+    /* Un gris muy oscuro en vez de negro puro para que la lectura canse menos la vista */
     color: #333333;
 }
 
 #formReserva {
+    /* Flexbox en columna para que los campos del formulario se apilen uno debajo del otro automáticamente */
     display: flex;
     flex-direction: column;
+    /* Limitamos el ancho a 600px para que en pantallas grandes el formulario no sea una tira gigante e ilegible */
     max-width: 600px;
+    /* El margin 'auto' a los lados centra el formulario perfectamente en medio de la pantalla */
     margin: 20px auto;
+    /* Margen interior para que los inputs no se peguen a la línea del borde */
     padding: 20px;
+    /* Borde gris sutil para delimitar visualmente dónde empieza y acaba el formulario */
     border: 1px solid #b2b2b2;
+    /* Suavizamos las esquinas del contenedor */
     border-radius: 8px;
 }
 
 .campo {
+    /* Cada grupo de <label> + <input> usa flex en columna para que el texto quede siempre justo encima de su cajetín */
     display: flex;
     flex-direction: column;
+    /* Separación entre cada bloque de campo para que el formulario "respire" y no se vea apelotonado */
     margin-bottom: 15px;
 }
 
 label {
     font-size: 14px;
+    /* Negrita para que quede claro qué dato se está pidiendo */
     font-weight: bold;
+    /* Un pequeño margen abajo para separar un pelín el título del cajetín donde se escribe */
     margin-bottom: 5px;
+    /* Un gris ligeramente más claro que el texto normal para establecer jerarquía visual */
     color: #444444;
 }
 
 input, select {
+    /* Padding para que el cajetín sea más alto y el texto no choque contra los bordes al escribir */
     padding: 10px;
+    /* Borde gris claro por defecto para los inputs */
     border: 1px solid #cccccc;
+    /* Bordes redondeados sutiles, a juego con el contenedor principal */
     border-radius: 5px;
     font-size: 14px;
 }
 
 input::placeholder {
+    /* Ponemos el texto de sugerencia (placeholder) en gris clarito para diferenciarlo claramente de lo que escribe el usuario */
     color: #cccccc;
 }
 
 .fila-fecha {
+    /* Usamos flexbox en fila (por defecto) para poner los cajetines de día/mes/año uno al lado del otro */
     display: flex;
+    /* Establece una separación exacta de 10px entre los inputs de la fecha */
     gap: 10px;   
 }
 
 .fila-fecha input {
+    /* Restringimos el ancho porque para poner "DD", "MM" o "AAAA" no hace falta un cajetín larguísimo */
     width: 60px;
+    /* Centramos el texto dentro del input porque visualmente queda mejor para números cortos */
     text-align: center;
 }
 
 .contenedor-boton {
+    /* Usamos flexbox solo para alinear el botón de envío */
     display: flex;
+    /* Empujamos el botón hacia la derecha del todo, un estándar clásico de usabilidad en formularios */
     justify-content: flex-end;
+    /* Lo separamos un poco del último campo */
     margin-top: 10px;
 }
 
 #btnReservar {
+    /* Azul corporativo fuerte para que destaque como la acción principal (Call to Action) */
     background-color: #0047bb;
     color: white;
+    /* Botón anchito y fácil de clicar */
     padding: 10px 20px;
+    /* Quitamos el borde feo que traen los botones HTML por defecto */
     border: none;
     border-radius: 6px;
+    /* Cambiamos el cursor a la típica "manita" para indicar que es interactivo */
     cursor: pointer;
+    /* Flexbox interno en el botón para alinear perfectamente el texto con el posible icono que lleve dentro */
     display: flex;
     align-items: center;
 }
 
 .icono {
+    /* Separamos el icono del texto del botón para que no queden pegados */
     margin-right: 8px;
 }
 
 /* Ocultacion del h1 */
 .sr-only {
+    /* Técnica vital de accesibilidad (Screen Reader Only).
+       Oculta elementos visualmente en la pantalla pero los deja en el código.
+       Esto permite cumplir con el SEO (tener un H1) y ayuda a las personas ciegas que usan lectores de pantalla, 
+       sin estropear tu diseño visual. Es mucho mejor que usar 'display: none'.
+    */
     position: absolute;
     width: 1px;
     height: 1px;
