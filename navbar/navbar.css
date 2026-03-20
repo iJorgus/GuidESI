@@ -1,40 +1,59 @@
-/* Reset básico para que se vea igual en todos los navegadores */
+/* Reset básico para que se vea igual en todos los navegadores. 
+   Elimina los márgenes y paddings que los navegadores añaden por defecto. */
 * {
     margin: 0;
     padding: 0;
+    /* Fundamental: hace que el padding y el borde se incluyan en el ancho total del elemento, 
+       evitando que las cajas se desborden inesperadamente. */
     box-sizing: border-box;
 }
 
 /* Scroll suave para la navegación */
 html {
+    /* Hace que al hacer clic en un enlace ancla (ej. #seccion2), 
+       la página se deslice suavemente en lugar de saltar de golpe. */
     scroll-behavior: smooth;
 }
+
 #navbar-container {
+    /* Mantiene la barra de navegación pegada en la parte superior al hacer scroll hacia abajo. */
     position: sticky;
     top: 0;
+    /* Un valor altísimo para asegurar que la barra siempre flote por encima del resto del contenido (imágenes, textos, etc.). */
     z-index: 1000;
 }
 
 /* Estilos principales de la Navbar */
 .navbar {
+    /* Usamos flexbox para alinear el logo, los enlaces y el botón en una misma fila. */
     display: flex;
+    /* Empuja el primer elemento (logo) a la izquierda, el último (botón) a la derecha, 
+       y deja los enlaces en el centro. */
     justify-content: space-between;
+    /* Centra todos los elementos verticalmente para que queden alineados. */
     align-items: center;
+    /* Espacio interior: 10px arriba/abajo, y 40px a los lados para que no se pegue a los bordes de la pantalla. */
     padding: 10px 40px;
     background-color: #ffffff;
+    /* Una línea sutil abajo para separar visualmente la barra del resto de la página. */
     border-bottom: 1px solid #e0e0e0; 
 }
 
 /* Contenedor del logo */
 .logo a {
+    /* Hace que el área clicable ocupe todo el espacio de su contenedor. */
     display: block; 
 }
 
 .logo-img {
+    /* Forzamos que sea un cuadrado perfecto (60x60) antes de aplicarle el radio. */
     height: 60px;
     width: 60px;
+    /* Lo convierte en un círculo perfecto. */
     border-radius: 50%;
+    /* Si la imagen original no es cuadrada, esto la recorta centrada en lugar de deformarla. */
     object-fit: cover;
+    /* Un borde muy fino para que el logo destaque un poco si el fondo de la imagen es blanco. */
     border: 1px solid #eaeaea;
 }
 
@@ -42,38 +61,49 @@ html {
 .nav-links {
     display: flex;
     flex-direction: row;
+    /* Quita los puntos por defecto de las listas HTML (<ul>). */
     list-style: none;
+    /* Separación de 40px entre cada enlace de la navegación. */
     gap: 40px; 
 }
 
 .nav-links li a {
+    /* Quita el subrayado típico y feo de los enlaces azules de HTML. */
     text-decoration: none;
+    /* Un gris oscuro en lugar de negro puro para que la lectura sea más suave. */
     color: #555555;
     font-weight: 500;
     font-size: 16px;
+    /* Hace que el cambio de color al pasar el ratón sea progresivo (0.3 segundos) y no instantáneo. */
     transition: color 0.3s ease;
 }
 
 /* Efecto al pasar el ratón y clase activa */
 .nav-links li a:hover,
 .nav-links li a.active {
+    /* Cambia al azul corporativo cuando pasas el ratón o cuando estás en esa página concreta (.active). */
     color: #0047a5; 
 }
 
 /* Botón derecho */
 .btn-reservar {
+    /* Permite aplicarle padding y márgenes a un enlace (<a>) como si fuera un bloque, 
+       pero manteniéndolo en línea. */
     display: inline-block;
     background-color: #004ca8; 
     color: #ffffff;
     text-decoration: none;
+    /* Un padding generoso para que parezca un botón "gordito" y fácil de pulsar. */
     padding: 12px 24px;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
+    /* Transición suave para el color de fondo al hacer hover. */
     transition: background-color 0.3s ease;
 }
 
 .btn-reservar:hover {
+    /* Un azul un poco más oscuro para dar la sensación de que se presiona o es interactivo. */
     background-color: #00367c;
 }
 
@@ -84,9 +114,11 @@ html {
 /* Para pantallas medianas (Tablets, hasta 900px) */
 @media screen and (max-width: 900px) {
     .navbar {
+        /* Reducimos el padding lateral para que los elementos no choquen al estrecharse la pantalla. */
         padding: 10px 20px;
     }
     .nav-links {
+        /* Juntamos los enlaces para que quepan todos sin saltar a otra línea. */
         gap: 15px;
     }
 }
@@ -94,31 +126,40 @@ html {
 /* Para móviles (hasta 480px) - Diseño horizontal compacto */
 @media screen and (max-width: 480px) {
     .navbar {
-        padding: 10px 5px; /* Reducimos el padding lateral casi al mínimo */
+        /* Reducimos el padding lateral casi al mínimo para ganar todo el ancho posible en móviles. */
+        padding: 10px 5px; 
         gap: 5px;
     }
     
     .logo-img {
-        height: 45px; /* Achicamos un poco el logo para ganar espacio */
+        /* Achicamos un poco el logo porque en móvil ocupa mucho espacio visual. */
+        height: 45px; 
         width: 45px;
     }
 
     .nav-links {
-        gap: 10px; /* Juntamos un poco más los enlaces */
+        /* Reducimos aún más el espacio entre enlaces. */
+        gap: 10px; 
     }
 
-    /* Ocultamos mágicamente la opción "Inicio" (el primer elemento de la lista) */
+    /* Ocultamos mágicamente la opción "Inicio" (el primer elemento de la lista).
+       Esto es un buen truco en móvil: el usuario ya sabe que tocando el logo va a Inicio, 
+       así que ahorramos espacio valioso borrando la palabra. */
     .nav-links li:first-child {
         display: none;
     }
 
     .nav-links li a {
-        font-size: 13px; /* Letra un poco más pequeña */
+        /* Letra un poco más pequeña para que no sature la barra. */
+        font-size: 13px; 
     }
 
     .btn-reservar {
-        padding: 8px 12px; /* Botón más ajustado */
-        font-size: 13px; /* Letra del botón más pequeña */
-        white-space: nowrap; /* Evita que el texto del botón se parta en dos líneas */
+        /* Hacemos el botón más compacto reduciendo su relleno. */
+        padding: 8px 12px; 
+        font-size: 13px; 
+        /* CRÍTICO: Evita que si la pantalla es muy muy estrecha, el texto del botón 
+           ("Reservar ahora") se parta en dos líneas rompiendo el diseño de la barra. */
+        white-space: nowrap; 
     }
 }
