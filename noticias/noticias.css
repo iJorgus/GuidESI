@@ -42,7 +42,7 @@ h3 { font-size: 14px; font-weight: 700; }
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 998;
+    z-index: 1001;
 }
 
 .overlay-noticias.activa {
@@ -60,7 +60,7 @@ h3 { font-size: 14px; font-weight: 700; }
     height: 100vh;
     background-color: var(--blanco-puro);
     box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    z-index: 1002;
     transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animación fluida */
     display: flex;
     flex-direction: column;
