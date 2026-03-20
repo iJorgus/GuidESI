@@ -1,133 +1,133 @@
-
 /* =========================================
    ARCHIVO: footer.css
 ========================================= */
 
 .footer {
-    background-color: #0047AB; /* El azul corporativo de GuidESI */
-    color: #ffffff;
-    padding: 60px 40px;
-    font-family: 'Inter', sans-serif;
-    margin-top: 50px; /* Separación con el contenido de arriba */
+    background-color: #0047AB; /* El azul corporativo de GuidESI. Usamos este fondo oscuro para delimitar bien el final de la página */
+    color: #ffffff; /* Texto en blanco para asegurar un buen contraste de lectura sobre el fondo azul */
+    padding: 60px 40px; /* Bastante aire arriba/abajo y un poco menos a los lados para que respire el contenido */
+    font-family: 'Inter', sans-serif; /* Fuente principal para textos, con sans-serif como respaldo de seguridad */
+    margin-top: 50px; /* Separación con el contenido de arriba para que no se pegue al catálogo o noticias */
 }
 
 .footer-content {
-    max-width: 1000px; /* Alineado con el max-width de tus secciones */
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+    max-width: 1000px; /* Evita que el contenido se estire al infinito en pantallas ultrapanorámicas */
+    margin: 0 auto; /* Centra este contenedor dentro del .footer principal */
+    display: flex; /* Usamos flexbox para colocar la zona de marca a la izquierda y los enlaces a la derecha */
+    justify-content: space-between; /* Empuja los elementos a los extremos del contenedor */
+    flex-wrap: wrap; /* Si la pantalla se estrecha y no caben, permite que los elementos salten a la línea inferior */
+    gap: 40px; /* Mantiene una distancia prudencial mínima entre los bloques */
 }
 
 /* --- SECCIÓN IZQUIERDA (MARCA) --- */
 .footer-brand {
-    max-width: 300px;
+    max-width: 300px; /* Limitamos el ancho para que la descripción no haga líneas de texto larguísimas y difíciles de leer */
 }
 
 .footer-logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    display: flex; /* Flex aquí nos sirve para alinear el logo y el nombre de la empresa en la misma línea */
+    align-items: center; /* Centra el logo y el texto verticalmente entre sí */
+    gap: 15px; /* Espacio entre el circulito del logo y el texto de GuidESI */
+    margin-bottom: 20px; /* Separación antes de empezar con el texto del copyright */
 }
 
 .footer-logo {
     width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+    height: 60px; /* Dimensiones fijas para que el logo siempre sea un cuadrado perfecto antes de redondearlo */
+    border-radius: 50%; /* Convierte el cuadrado en un círculo perfecto */
+    object-fit: cover; /* Crucial: evita que la imagen se deforme o achate si no tiene proporción 1:1 */
     background-color: #ffffff;
-    padding: 2px; /* Pequeño borde blanco alrededor del logo */
+    padding: 2px; /* Pequeño borde blanco alrededor del logo, queda elegante sobre el fondo azul */
 }
 
 .footer-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', sans-serif; /* Usamos la fuente secundaria para dar empaque al nombre de la marca */
     color: #ffffff;
     font-size: 24px;
-    margin: 0;
+    margin: 0; /* Quitamos márgenes por defecto para controlar nosotros el espaciado con flex/gap */
 }
 
 .footer-copyright {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #b3d4ff; /* Azul clarito para que no resalte tanto como los enlaces */
+    font-size: 13px; /* Letra pequeña, es información legal/secundaria */
+    line-height: 1.6; /* Interlineado un poco más amplio para que los bloques de texto pequeño no saturen a la vista */
+    color: #b3d4ff; /* Azul clarito para que no resalte tanto como los enlaces ni le robe protagonismo al título */
     margin-bottom: 25px;
 }
 
 /* --- ICONOS DE REDES SOCIALES --- */
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Separación entre los diferentes botones de redes */
 }
 
 .social-icons a {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centra el icono SVG horizontalmente dentro del botón redondo */
+    align-items: center; /* Centra el icono verticalmente */
     width: 38px;
-    height: 38px;
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-    border-radius: 50%;
-    color: #ffffff;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    height: 38px; /* Tamaño táctil mínimo recomendado para móviles */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente. Queda más sutil que un blanco sólido */
+    border-radius: 50%; /* Botones circulares */
+    color: #ffffff; /* Color del icono (el SVG hereda este color) */
+    text-decoration: none; /* Quitamos subrayados por si acaso el navegador se los pone al enlace */
+    transition: all 0.3s ease; /* Suaviza el cambio de color y el movimiento cuando pasas el ratón por encima */
 }
 
 .social-icons a:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    transform: translateY(-3px); /* Pequeño salto hacia arriba al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.25); /* Al hacer hover, el fondo se vuelve más opaco/blanco, dando feedback visual */
+    transform: translateY(-3px); /* Pequeño salto hacia arriba al pasar el ratón. Da un tacto muy 'premium' y dinámico */
 }
 
 .social-icons svg {
     width: 18px;
-    height: 18px;
+    height: 18px; /* Controlamos el tamaño del icono vectorial dentro de su botón circular */
 }
 
 /* --- SECCIÓN DERECHA (ENLACES) --- */
 .footer-links-wrapper {
-    display: flex;
-    gap: 80px;
-    flex-wrap: wrap;
+    display: flex; /* Alinea las distintas columnas de enlaces (Ej: "Legal", "Compañía") una al lado de la otra */
+    gap: 80px; /* Mucho aire entre columnas para que se distingan bien los bloques de información */
+    flex-wrap: wrap; /* Si no caben en la misma línea, que salten abajo (útil en tablets) */
 }
 
 .footer-column h3 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', sans-serif; /* Mantenemos la coherencia de fuentes para los títulos */
     color: #ffffff;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Separación entre el título de la columna y el primer enlace */
     margin-top: 0;
 }
 
 .footer-column ul {
-    list-style: none;
+    list-style: none; /* Quitamos los típicos puntitos/viñetas de las listas HTML, queremos un diseño limpio */
     padding: 0;
-    margin: 0;
+    margin: 0; /* Reseteamos márgenes y paddings por defecto del ul */
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: column; /* Apilamos los enlaces uno debajo del otro */
+    gap: 12px; /* Separación vertical entre enlaces. Fácil de "tapear" con el dedo en móvil */
 }
 
 .footer-column a {
-    color: #b3d4ff;
-    text-decoration: none;
+    color: #b3d4ff; /* Mismo color secundario que el copyright. Indica que no es el texto principal */
+    text-decoration: none; /* Quitamos el subrayado por defecto para un look más moderno */
     font-size: 13px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Si no ponemos transition, el hover cambia de color de golpe. Así es más suave */
 }
 
 .footer-column a:hover {
-    color: #ffffff;
-    text-decoration: underline; /* Subrayado clásico al pasar el ratón */
+    color: #ffffff; /* Se ilumina en blanco al pasar el ratón, indicando que es interactivo */
+    text-decoration: underline; /* Subrayado clásico al pasar el ratón para confirmar que es un link */
 }
 
 /* --- RESPONSIVE PARA MÓVILES --- */
+/* Cuando la pantalla sea menor a 768px (tablets verticales y móviles), aplicamos estos cambios */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column;
+        flex-direction: column; /* Rompemos la estructura de izquierda-derecha y apilamos la marca encima de los enlaces */
     }
     
     .footer-links-wrapper {
-        gap: 40px;
-        flex-direction: column;
+        gap: 40px; /* Reducimos el espacio exagerado que teníamos en desktop */
+        flex-direction: column; /* Apilamos las columnas de enlaces también una debajo de la otra en lugar de en paralelo */
     }
 }
