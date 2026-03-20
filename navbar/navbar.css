@@ -76,3 +76,49 @@ html {
 .btn-reservar:hover {
     background-color: #00367c;
 }
+
+/* =========================================
+   DISEÑO RESPONSIVO (Adaptación a pantallas)
+   ========================================= */
+
+/* Para pantallas medianas (Tablets, hasta 900px) */
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+/* Para móviles (hasta 480px) - Diseño horizontal compacto */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 5px; /* Reducimos el padding lateral casi al mínimo */
+        gap: 5px;
+    }
+    
+    .logo-img {
+        height: 45px; /* Achicamos un poco el logo para ganar espacio */
+        width: 45px;
+    }
+
+    .nav-links {
+        gap: 10px; /* Juntamos un poco más los enlaces */
+    }
+
+    /* Ocultamos mágicamente la opción "Inicio" (el primer elemento de la lista) */
+    .nav-links li:first-child {
+        display: none;
+    }
+
+    .nav-links li a {
+        font-size: 13px; /* Letra un poco más pequeña */
+    }
+
+    .btn-reservar {
+        padding: 8px 12px; /* Botón más ajustado */
+        font-size: 13px; /* Letra del botón más pequeña */
+        white-space: nowrap; /* Evita que el texto del botón se parta en dos líneas */
+    }
+}
