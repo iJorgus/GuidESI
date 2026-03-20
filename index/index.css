@@ -1,5 +1,6 @@
 /* Paleta de Colores Corporativos GuidESI */
 :root {
+    /* Guardamos los colores en variables globales. Así, si el cliente cambia de idea mañana, solo modificamos esto y se actualiza en toda la web */
     --azul-cielo: #E0F7FF;
     --azul-cobalto: #0047AB;
     --azul-intermedio: #89BAFF;
@@ -8,33 +9,44 @@
 
 /* Estilos Base y Tipografía */
 body {
+    /* Fuente principal limpia y moderna para los textos largos */
     font-family: 'Inter', sans-serif;
+    /* Tamaño base de lectura */
     font-size: 12px;
+    /* Reseteo obligatorio para que no queden márgenes blancos feos a los bordes de la pantalla */
     margin: 0;
     padding: 0;
     background-color: var(--blanco-puro);
+    /* Un gris muy oscuro en lugar de negro puro cansa menos la vista al leer */
     color: #333;
 }
 
 h1, h2, h3 {
+    /* Fuente con más personalidad para los títulos */
     font-family: 'Outfit', sans-serif;
     color: var(--azul-cobalto);
+    /* Quitamos el margen superior que traen por defecto para alinear mejor los bloques */
     margin-top: 0;
 }
 
+/* Jerarquía de tamaños de títulos claramente definida */
 h1 { font-size: 28px; font-weight: 700; }
 h2 { font-size: 18px; font-weight: 700; }
 h3 { font-size: 14px; font-weight: 700; }
 
-/* Regla de seguridad para que ninguna imagen se salga de su caja */
+/* Regla de seguridad vital para diseño responsive */
 img {
+    /* Impide que una imagen gigante desborde su contenedor y cree scroll horizontal */
     max-width: 100%;
+    /* Mantiene las proporciones originales para que no se achate */
     height: auto;
 }
 
 /* Hero Section & Buscador */
 .hero-section {
+    /* Fondo clarito para la cabecera principal */
     background-color: var(--azul-cielo);
+    /* Bastante aire para que el mensaje principal respire */
     padding: 60px 40px;
     text-align: center;
 }
@@ -43,25 +55,33 @@ img {
     background: var(--blanco-puro);
     padding: 20px;
     border-radius: 8px;
+    /* Flexbox es ideal aquí para poner todos los campos de búsqueda en fila */
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
+    /* Si la pantalla es pequeña (móvil), los campos saltarán a la línea de abajo automáticamente */
     flex-wrap: wrap;
+    /* Sombrilla sutil para que la barra flote sobre el fondo de la hero-section */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    /* Centramos la barra y la separamos del texto de arriba */
     margin: 30px auto 0;
+    /* Evita que en monitores ultra anchos la barra sea larguísima */
     max-width: 900px;
 }
 
 .search-bar input, .search-bar select {
     padding: 10px;
+    /* Borde sutil usando un color de la marca */
     border: 1px solid var(--azul-intermedio);
     border-radius: 4px;
+    /* Los inputs no heredan la fuente del body por defecto, hay que forzarlo */
     font-family: 'Inter', sans-serif;
     font-size: 12px;
 }
 
 .search-bar .price-range {
+    /* Alinea el texto del rango de precio con sus inputs correspondientes */
     display: flex;
     align-items: center;
     gap: 5px;
@@ -73,27 +93,34 @@ img {
     border: none;
     padding: 12px 24px;
     border-radius: 4px;
+    /* Puntero de mano para dejar clarísimo que es un botón interactivo */
     cursor: pointer;
     font-weight: bold;
+    /* Le ponemos la fuente de títulos al botón para darle más peso visual */
     font-family: 'Outfit', sans-serif;
 }
 
 .search-btn:hover {
-    background-color: #003580; /* Tono ligeramente más oscuro para el hover */
+    /* Pequeño feedback visual: oscurecemos el botón al pasar el ratón */
+    background-color: #003580; 
 }
 
 /* Secciones: Estadísticas y Guías Destacados */
 .section-container {
     padding: 50px 40px;
+    /* Mantenemos un ancho máximo para centrar la atención en monitores grandes */
     max-width: 1000px;
+    /* margin 0 auto centra el contenedor en la pantalla */
     margin: 0 auto;
 }
 
 .grid-container {
     display: flex;
+    /* Reparte el espacio sobrante entre las tarjetas */
     justify-content: space-around;
     gap: 20px;
     margin-top: 30px;
+    /* Permite que las tarjetas bajen de fila si no caben (responsive) */
     flex-wrap: wrap;
 }
 
@@ -103,57 +130,69 @@ img {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    /* Flex 1 hace que todas las tarjetas intenten ocupar el mismo ancho */
     flex: 1;
+    /* Pero nunca serán más estrechas de 200px, momento en el cual saltarán de línea gracias al flex-wrap */
     min-width: 200px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .card img {
+    /* Fotos de perfil redondas y de tamaño fijo para uniformidad */
     width: 80px;
     height: 80px;
     border-radius: 50%;
     background-color: var(--azul-intermedio);
     margin-bottom: 15px;
+    /* object-fit cover recorta la foto si no es cuadrada, evitando que se deforme */
     object-fit: cover;
 }
 
 /* CSS para el video preview */
-/* Contenedor de la miniatura */
+/* Contenedor principal de la miniatura del vídeo */
 .video-preview {
+    /* Relative es crucial aquí: nos permite posicionar el botón de play absoluto en su interior */
     position: relative;
     cursor: pointer;
     max-width: 800px;
     margin: 40px auto;
     border-radius: 20px;
+    /* Oculta cualquier parte de la imagen que se salga al hacer el efecto zoom (scale) */
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .video-preview img {
     width: 100%;
+    /* Display block quita un margen inferior fantasma que suelen dejar las imágenes inline */
     display: block;
+    /* Transición suave para el efecto de zoom al pasar el ratón */
     transition: transform 0.5s ease;
 }
 
-/* Efecto al pasar el ratón por la imagen */
+/* Efecto al pasar el ratón por la imagen: hace un ligero zoom */
 .video-preview:hover img {
     transform: scale(1.03);
 }
 
-/* Capa que contiene el icono de play */
+/* Capa oscura que contiene el icono de play y se superpone a la imagen */
 .capa-play {
+    /* Se posiciona encima de la imagen cubriéndola entera */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /* Flexbox para centrar el icono de play perfectamente en medio */
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Fondo negro con 20% de opacidad para oscurecer un poco la imagen de fondo */
     background-color: rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
 }
 
+/* Al pasar el ratón por el contenedor, oscurecemos más la capa negra para resaltar el play */
 .video-preview:hover .capa-play {
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -164,37 +203,43 @@ img {
     opacity: 0.9;
 }
 
-/* El Pop-up (Fondo oscuro) */
+/* El Pop-up (Fondo oscuro donde se carga el iframe de YouTube) */
 .popup-video-overlay {
-    display: none; /* Oculto por defecto */
+    display: none; /* Oculto por defecto, se activa por JS */
+    /* Fixed para que ocupe toda la pantalla aunque hagamos scroll */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /* Fondo casi negro total para aislar el vídeo */
     background-color: rgba(0, 0, 0, 0.9);
+    /* Z-index altísimo para tapar el menú de navegación, footer, etc. */
     z-index: 2000;
     justify-content: center;
     align-items: center;
 }
 
-/* Contenedor interno del video */
+/* Contenedor interno que le da el tamaño correcto al iframe de YouTube */
 .popup-video-interno {
     position: relative;
     width: 80%;
     max-width: 1000px;
-    aspect-ratio: 16 / 9; /* Mantiene la proporción de cine */
+    /* Truco moderno de CSS: Mantiene automáticamente la proporción 16:9 de cine sin tener que calcular alturas fijas por JS */
+    aspect-ratio: 16 / 9; 
     background: black;
 }
 
 .popup-video-interno iframe {
+    /* El iframe ocupa todo el tamaño que le marque el contenedor .popup-video-interno */
     width: 100%;
     height: 100%;
     border: none;
 }
 
-/* Botón de cerrar personalizado */
+/* Botón de cerrar personalizado ("X") */
 .boton-cerrar-video {
+    /* Se posiciona fuera y arriba a la derecha del contenedor del vídeo */
     position: absolute;
     top: -45px;
     right: 0;
@@ -205,20 +250,22 @@ img {
 }
 /* Fin CSS para el video preview */
 
-/* Selecciona el span que tiene el nombre del icono */
+/* Estilos específicos para el icono material del play */
 .capa-play .material-symbols-outlined {
-    font-family: 'Material Symbols Outlined'; /* Obliga a usar la fuente de iconos */
+    /* Obliga a usar la fuente de iconos, necesario a veces si hay conflictos de fuentes */
+    font-family: 'Material Symbols Outlined'; 
     font-size: 80px;
     color: white;
-    user-select: none; /* Evita que se pueda seleccionar el texto "play_circle" */
+    /* Evita que un doble clic seleccione el texto "play_circle" estropeando la experiencia */
+    user-select: none; 
     
-    /* Efecto de sombra para que resalte sobre cualquier imagen */
+    /* Sombreado dinámico: hace que el icono blanco se lea bien incluso si la miniatura del vídeo es muy blanca */
     filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
     transition: transform 0.2s ease;
 }
 
-/* Efecto visual al pasar el ratón */
+/* Efecto visual al pasar el ratón: el icono crece y coge color de la marca */
 .video-preview:hover .material-symbols-outlined {
     transform: scale(1.1);
-    color: #89BAFF; /* Cambia al azul de tu diseño de guía */
+    color: #89BAFF; 
 }
