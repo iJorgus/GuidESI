@@ -24,15 +24,15 @@
         <p>Encuentra al guía turístico perfecto para tu próxima aventura.</p>
         
         <div class="search-bar">
-            <input type="text" placeholder="Ciudad">
-            <input type="number" placeholder="Personas" min="1">
-            <select>
+            <input type="text" placeholder="Ciudad" aria-label="Ciudad">
+            <input type="number" placeholder="Personas" min="1" aria-label="Número de personas">
+            <select aria-label="Idioma">
                 <option value="">Idioma</option>
                 <option value="es">Español</option>
                 <option value="en">Inglés</option>
                 <option value="fr">Francés</option>
             </select>
-            <input type="date" id="fecha-viaje" name="fecha">
+            <input type="date" id="fecha-viaje" name="fecha" aria-label="Fecha del viaje">
             <div class="price-range">
                 <label for="precio">Rango de precio:</label>
                 <input type="range" id="precio" min="0" max="200">
