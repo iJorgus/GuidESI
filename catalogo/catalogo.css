@@ -177,6 +177,8 @@ section {
     clip: rect(0, 0, 0, 0);
     /* Quita los bordes */
     border: 0;
+    /* Asegura que el elemento no ocupe espacio ni sea visible en la página */
+    display: none;
 }
 
 /* =========================================
