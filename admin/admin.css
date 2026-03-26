@@ -1,0 +1,231 @@
+/* Importamos las tipografías corporativas desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap');
+
+/* Paleta de Colores Corporativos GuidESI */
+:root {
+    --azul-cielo: #E0F7FF;
+    --azul-cobalto: #0047AB;
+    --azul-intermedio: #89BAFF;
+    --blanco-puro: #FFFFFF;
+    --rojo-peligro: #e74c3c; /* Añadido exclusivamente para las acciones de borrar */
+}
+
+/* Estilos Base y Tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    /* Usamos el azul cielo para el fondo exterior, cansa menos que el blanco puro */
+    background-color: var(--azul-cielo);
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--azul-cobalto);
+    margin-top: 0;
+}
+
+h1 { font-size: 28px; font-weight: 700; }
+h2 { font-size: 18px; font-weight: 700; }
+h3 { font-size: 14px; font-weight: 700; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Layout del Panel de Administración --- */
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* Menú Lateral (Sidebar) adaptado a la marca */
+.sidebar {
+    width: 260px;
+    background-color: var(--azul-cobalto);
+    color: var(--blanco-puro);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.sidebar h2 {
+    color: var(--blanco-puro); /* Sobrescribimos el color por defecto para que se lea en fondo oscuro */
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.db-info {
+    text-align: center;
+    color: var(--azul-intermedio);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.nav-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--blanco-puro);
+    padding: 15px 20px;
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, border-left 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.nav-btn:hover {
+    background-color: #003580; /* Un tono un poco más oscuro que el cobalto para el hover */
+    border-left: 4px solid var(--azul-intermedio);
+}
+
+.nav-btn.btn-danger:hover {
+    border-left: 4px solid var(--rojo-peligro);
+}
+
+/* Área de Contenido Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+header {
+    background-color: var(--blanco-puro);
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.content-area {
+    padding: 30px;
+    /* Hereda el fondo azul cielo del body */
+}
+
+.welcome-msg {
+    text-align: center;
+    color: #555;
+    margin-top: 50px;
+}
+
+/* --- Formularios (Crear, Editar, Buscar) --- */
+.form-container {
+    background: var(--blanco-puro);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--azul-intermedio);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--azul-cobalto);
+}
+
+/* Inputs adaptados a la directriz de la search-bar */
+.form-group input, .action-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--azul-intermedio);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+.form-group input:focus, .action-form input:focus {
+    outline: none;
+    border-color: var(--azul-cobalto);
+    box-shadow: 0 0 5px rgba(0, 71, 171, 0.2);
+}
+
+fieldset {
+    border: 1px solid var(--azul-intermedio);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #FAFDFF; /* Un blanco minimamente azulado */
+}
+
+fieldset legend {
+    font-family: 'Outfit', sans-serif;
+    color: var(--azul-cobalto);
+    padding: 0 8px;
+}
+
+/* Botones de acción adaptados a la directriz del search-btn */
+.submit-btn {
+    background-color: var(--azul-cobalto);
+    color: var(--blanco-puro);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #003580;
+}
+
+.action-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* --- Tablas de Resultados --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco-puro);
+    border: 1px solid var(--azul-intermedio);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--azul-cielo);
+}
+
+th {
+    background-color: var(--azul-cobalto);
+    color: var(--blanco-puro);
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+tr:hover {
+    background-color: var(--azul-cielo);
+}
+
+.client-info {
+    color: #555;
+    line-height: 1.5;
+}
