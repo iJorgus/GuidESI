@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - BD-GuidESI</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="noticias.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>Admin GuidESI</h2>
+            <p class="db-info">Base: jbb-pnet-2025-2026</p>
+            <nav>
+                <button id="btn-get-all" class="nav-btn">1. Recuperar Todas</button>
+                <button id="btn-get-one" class="nav-btn">2. Buscar por ID</button>
+                <button id="btn-add" class="nav-btn">3. Añadir Reserva</button>
+                <button id="btn-update" class="nav-btn">4. Actualizar Reserva</button>
+                <button id="btn-delete-all" class="nav-btn btn-danger">5. Eliminar Todas</button>
+                <button id="btn-delete-one" class="nav-btn btn-danger">6. Eliminar por ID</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Gestión de Reservas</h1>
+            </header>
+            
+            <div id="display-area" class="content-area">
+                <div class="welcome-msg">
+                    <h3>Bienvenido al panel de administración</h3>
+                    <p>Selecciona una opción del menú lateral para gestionar la colección de reservas.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <div id="overlay-noticias" class="overlay-noticias"></div>
+
+    <aside id="sidebar-noticias" class="sidebar-noticias">
+        <div class="sidebar-header">
+            <h2>Últimas Noticias</h2>
+            <button id="btn-cerrar-noticias" class="btn-cerrar">&times;</button>
+        </div>
+        
+        <div class="sidebar-content">
+            <article class="noticia-card">
+                <h3>Nueva actualización del sistema</h3>
+                <p>Hemos implementado mejoras en la velocidad de carga y nuevos colores en la interfaz de usuario.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+
+            <article class="noticia-card">
+                <h3>Mantenimiento programado</h3>
+                <p>El próximo fin de semana los servidores estarán inactivos por 2 horas debido a mantenimiento.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+
+            <article class="noticia-card">
+                <h3>¡Lanzamiento de nueva función!</h3>
+                <p>Descubre el nuevo panel de control personalizable, ahora disponible para todos los usuarios.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </article>
+        </div>
+    </aside>
+
+    <script src="admin.js"></script>
+    <script src="importar.js"></script>
+    <script src="noticias.js"></script>
+</body>
+</html>
