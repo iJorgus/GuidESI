@@ -124,5 +124,49 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             return;
         }
+
+        // 1. IMPORTANTE: Cancelar el envío tradicional del formulario SIEMPRE si pasamos las validaciones
+        event.preventDefault();
+
+        // 2. Construir el objeto de datos EXACAMENTE como lo espera tu Schema de Mongoose
+        const datosReserva = {
+            _id: 'RES-' + Date.now(), // Generamos un ID de texto único usando la fecha actual
+            fecha: `${d}/${m}/${a}`,
+            hora: document.getElementById('hora') ? document.getElementById('hora').value : '10:00', // Asegúrate de tener un input 'hora'
+            numero_de_personas: cantidadIntroducida,
+            guia_id: guiaFinal, 
+            cliente: {
+                nombre_completo: nombreCliente,
+                correo: email,
+                telefono: valorTelefono
+            }
+        };
+
+        // 3. Enviar a tu API de Node.js (NO a la URL de MongoDB)
+        fetch('/api/reservas', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(datosReserva)
+        })
+        .then(response => {
+            // Comprobamos si el backend devolvió un error (ej. status 400 o 500)
+            if (!response.ok) {
+                return response.json().then(err => { throw err; });
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert("¡Reserva confirmada y guardada en la base de datos!");
+            form.reset(); // Limpia el formulario para una nueva reserva
+        })
+        .catch(error => {
+            console.error('Error del servidor:', error);
+            // Mostrar el mensaje de error que manda el backend si existe, si no un mensaje genérico
+            const mensajeError = error.mensaje || "Hubo un error al conectar con el servidor.";
+            alert(mensajeError);
+        });
+
     });
-});
+}); 
