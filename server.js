@@ -1,19 +1,30 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const logger = require('morgan');
+const http = require('http');
+const path = require('path');
 
 const app = express();
 
+// --- Constantes de configuración ---
+const PORT = process.env.PORT || 8080;
+
+// --- Configuraciones para la app (Middlewares) ---
 app.use(express.json()); // Permite entender el JSON
+app.use(express.urlencoded({ extended: true })); // Permite procesar datos de formularios
+app.use(logger('dev')); // Logger para ver las peticiones por consola
 
 // Le decimos a Node que sirva los archivos web desde la carpeta "public"
-app.use(express.static('public')); 
+app.use(express.static('public'));
 
 // --- Conexión a MongoDB ---
 const MONGO_URI = 'mongodb+srv://jorgebolivarblandino:BESybRVAvP-2468@jbb-pnet-2025-2026.gzukxrm.mongodb.net/?appName=jbb-pnet-2025-2026';
 
 mongoose.connect(MONGO_URI)
     .then(() => console.log('✅ Conectado a MongoDB'))
-    .catch(err => console.error('❌ Error conectando a MongoDB:', err));// --- Definición del Modelo (Estructura de la Reserva) ---
+    .catch(err => console.error('❌ Error conectando a MongoDB:', err));
+
+// --- Definición del Modelo (Estructura de la Reserva) ---
 const reservaSchema = new mongoose.Schema({
     _id: String, // Usamos String porque tus IDs son texto, ej: "RES-102"
     fecha: String,
@@ -108,7 +119,7 @@ app.delete('/api/reservas/:id', async (req, res) => {
 });
 
 // --- Iniciar el Servidor ---
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`🚀 Servidor backend corriendo en http://localhost:${PORT}`);
+const server = http.createServer(app);
+server.listen(PORT, function () {
+    console.log('Server up and running on localhost:' + PORT);
 });
