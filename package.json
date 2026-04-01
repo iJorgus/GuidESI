@@ -1,0 +1,25 @@
+{
+  "name": "api-reservas-guidesi",
+  "version": "1.0.0",
+  "description": "API RESTful para la gestión de reservas de clientes y guías. Desarrollada con Node.js, Express y MongoDB.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "api",
+    "backend",
+    "reservas",
+    "express",
+    "mongodb",
+    "mongoose",
+    "javascript"
+  ],
+  "author": "Jorge Bolívar, Juan Fernandez, Anna Adamczyk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.0",
+    "mongoose": "^8.3.0"
+  }
+}
